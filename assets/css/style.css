@@ -48,14 +48,6 @@ body {
   /* background: linear-gradient(180deg, #ffffff 0%, #151515 15%); */
 }
 
-a {
-  color: #00c5db;
-}
-
-a:hover {
-  color: #00c5dbab;
-  text-decoration: none;
-}
 
 body,
 h1,
@@ -115,34 +107,6 @@ h6 {
   transition: ease-in-out 0.3s;
 }
 
-/*--------------------------------------------------------------
-# Back to top button
---------------------------------------------------------------*/
-.back-to-top {
-  position: fixed;
-  display: none;
-  right: 15px;
-  bottom: 15px;
-  z-index: 99999;
-  transition: 0.5s;
-}
-
-.back-to-top i {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  width: 40px;
-  height: 40px;
-  border-radius: 50px;
-  background: #00c5db;
-  color: #ffffff;
-  transition: all 0.4s;
-}
-
-.back-to-top:hover {
-  bottom: 19px;
-}
 
 /*--------------------------------------------------------------
 # Header
@@ -271,17 +235,7 @@ h6 {
   color: #ffffff;
 }
 
-.nav-menu .drop-down ul a:hover,
-.nav-menu .drop-down ul .active > a,
-.nav-menu .drop-down ul li:hover > a {
-  color: #00c5db;
-}
 
-.nav-menu .drop-down > a:after {
-  content: "\ea99";
-  font-family: IcoFont;
-  padding-left: 5px;
-}
 
 .nav-menu .drop-down .drop-down ul {
   top: 0;
@@ -349,10 +303,6 @@ h6 {
   text-align: right;
 }
 
-.mobile-nav-toggle i {
-  color: #00c5db;
-}
-
 .mobile-nav {
   text-align: center;
   backdrop-filter: blur(20px);
@@ -385,13 +335,6 @@ h6 {
   padding: 10px 20px;
   font-weight: 100;
   outline: none;
-}
-
-.mobile-nav a:hover,
-.mobile-nav .active > a,
-.mobile-nav li:hover > a {
-  color: #00c5db;
-  text-decoration: none;
 }
 
 .mobile-nav .drop-down > a:after {
@@ -528,15 +471,16 @@ h6 {
   font-size: 20px;
 }
 
+
 .play {
   margin-top: 3%;
   width: 100%;
   display: flex;
 }
 
-.play-1 {
+#hero a {
   font-weight: 600;
-  color: #000000;
+  color: #000000 !important;
   background-color: #ffffff;
   width: auto; 
   padding: 10px 28px;
@@ -549,10 +493,11 @@ h6 {
   gap: 10px;
   margin-right: 10px;
   transition: all 0.2s ease-in-out 0s;
+  text-decoration: none;
 }
 
-.play-1:hover {
-  color: #000000af;
+#hero a:hover {
+  color: #000000af !important;
   background-color: #ffffffaf;
 }
 
@@ -706,7 +651,7 @@ h6 {
 
 #footer {
   background: #00000018;
-  color: rgb(31, 25, 25);
+  color: rgb(234, 234, 234);
   font-size: 14px;
   text-align: center;
   padding: 30px 0;
@@ -733,7 +678,6 @@ h6 {
 #footer .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: #00c5db;
   color: #ffffff;
   line-height: 1;
   padding: 8px 0;
@@ -907,4 +851,110 @@ NETFLIX ARROW CONTROLS WITH SMOOTH GRADIENT TRANSITIONS
 
 .nx-carousel-arrow-btn.nx-btn-right::before {
     background: linear-gradient(270deg, #000000df 60%, rgba(0,0,0,0) 100%) !important;
+}
+
+
+/* Make both media elements take up 100% of the box frame coordinates */
+.nx-poster-thumb, 
+.nx-video-preview {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+    transition: opacity 0.4s ease-in-out !important; /* Smooth fade effect */
+}
+
+/* Image starts fully visible */
+.nx-poster-thumb {
+    opacity: 1;
+    z-index: 2;
+}
+
+/* Video starts completely hidden behind the image */
+.nx-video-preview {
+    opacity: 0;
+    z-index: 1;
+}
+
+/* 💡 INTERACTIVE ACTIVE HOVER UTILITY STATES */
+/* When the active class is injected, fade out the image and fade in the playing video */
+.nx-carousel-card-item.is-playing .nx-poster-thumb {
+    opacity: 0;
+}
+
+.nx-carousel-card-item.is-playing .nx-video-preview {
+    opacity: 1;
+    z-index: 3; /* Brings the video layer cleanly to the top position */
+}
+
+
+
+
+
+/* Ensure the image container works as a stable parent anchor */
+.hero-img {
+  width: 93.5%;
+  height: 92%;
+  border-radius: 30px;
+  margin-top: 6%;
+  overflow: hidden;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative; /* 💡 REQUIRED: Sets bounds for the video layer */
+  z-index: 1;
+}
+
+/* Force both media types to inherit the container dimensions */
+.hero-media-base,
+.hero-media-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  display: block;
+  transition: opacity 0.5s ease-in-out !important; /* Smooth cinema fade transition */
+}
+
+/* Default visibilities */
+.hero-media-base {
+  opacity: 1;
+  z-index: 2;
+}
+
+.hero-media-video {
+  opacity: 0;
+  z-index: 1;
+}
+
+/* 💡 ACTIVE PLAYING UTILITY CLASS: Swaps visibility states smoothly */
+.hero-img.is-playing-video .hero-media-base {
+  opacity: 0;
+}
+
+.hero-img.is-playing-video .hero-media-video {
+  opacity: 1;
+  z-index: 3; /* Smoothly brings the active video over the image banner background */
+}
+
+/* Fix your text details layer index so text always renders clearly over playing video frames */
+.hero-deets {
+  color: #ffffff;
+  position: absolute;
+  margin-left: 5%;
+  margin-top: 27%;
+  z-index: 10; /* Keeps all text content safely on top of structural layouts */
+}
+.title-logo {
+  position: absolute;
+  width: 400px;
+  margin-left: 4%;
+  margin-top: 15%;
+  z-index: 10;
+  pointer-events: none;
 }

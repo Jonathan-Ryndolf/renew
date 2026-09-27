@@ -87,12 +87,18 @@
         </div>
         <div class="para">hello everyone uhdfiaubdf ajkdsajbd uibdfmns adashibdsa dzhdbfa duiaghs</div>
         <div class="play">
-          <div class="play-1">Play</div>
+          <div class="play-1"><a href="/renew.html">Play</a></div>
           <div class="play-2">More Info</div>
         </div>
       </div>
-      <div class="hero-img">
-        <img src="assets/img/hero-bg.jpg">
+      <div class="hero-img" onmouseenter="playHeroPreview(this)" onmouseleave="stopHeroPreview(this)">
+        <!-- Base Default Image -->
+        <img src="assets/img/hero-bg.jpg" class="hero-media-base" alt="Hero Base">
+        
+        <!-- Hidden Video Element (Muted + Disabled PiP tags bypass native browser popups) -->
+        <video class="hero-media-video" muted loop playsinline preload="none" disablepictureinpicture controlsList="nodownload nopictureinpicture">
+          <source src="assets/img/portfolio/freelance/1v.mp4" type="video/mp4">
+        </video>
       </div>
     </div>
   </section>
@@ -112,7 +118,12 @@
             <!-- Clipping Window Framework -->
             <div class="nx-carousel-clip-viewport">
                 <div class="nx-carousel-moving-track" id="nxMovieTrack">
-                    <div class="nx-carousel-card-item"><img src="assets/img/portfolio/freelance/kobras.jpg" alt="Card 1"></div>
+                    <div class="nx-carousel-card-item" onmouseenter="playPreview(this)" onmouseleave="stopPreview(this)">
+                      <img src="assets/img/portfolio/freelance/kobras.jpg" alt="Card 1">
+                      <video class="nx-video-preview" muted loop playsinline preload="none" disablepictureinpicture controlsList="nodownload nopictureinpicture">
+                        <source src="assets/img/portfolio/freelance/1v.mp4" type="video/mp4">
+                      </video>
+                    </div>
                     <div class="nx-carousel-card-item"><img src="assets/img/portfolio/freelance/midas.jpg" alt="Card 2"></div>
                     <div class="nx-carousel-card-item"><img src="assets/img/portfolio/freelance/1more.png" alt="Card 3"></div>
                     <div class="nx-carousel-card-item"><img src="assets/img/portfolio/freelance/cali.jpg" alt="Card 4"></div>
@@ -129,9 +140,6 @@
 
     <footer id="footer">
       <div class="container">
-        <p>
-          If You don't follow your heart, Who will?
-        </p>
         <div class="social-links text-center pt-3 pt-md-0">
           <a href="https://www.behance.net/jonathanryndolf" class="behance" target="_blank" rel="noopener noreferrer"><i class="icofont-behance"></i></a>
           <a href="https://www.instagram.com/jonathan.ryndolf/" class="instagram" target="_blank" rel="noopener noreferrer"><i class="bx bxl-instagram"></i></a>
@@ -140,6 +148,9 @@
           <a href="https://discordapp.com/channels/@me/485814814095179777/" class="discord" target="_blank" rel="noopener noreferrer"><i class='bx bxl-discord-alt'></i></a>
           <a href="https://github.com/Jonathan-Ryndolf" class="github" target="_blank" rel="noopener noreferrer"><i class="bx bxl-github"></i></a>
         </div>
+        <p>
+          If You don't follow your heart, Who will?
+        </p>
       </div>
     </footer>
     <!-- End Footer -->
