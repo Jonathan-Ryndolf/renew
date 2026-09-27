@@ -1,0 +1,323 @@
+/*--------------------------------------------------------------
+# Portfolio
+--------------------------------------------------------------*/
+
+video {
+  margin-top: 13px;
+  height: 200px;
+  border-radius: 10px;
+  margin-right: 25px;
+  margin-left: 25px;
+}
+
+.freelance,
+.digital {
+  height: fit-content;
+  margin: auto 0;
+}
+
+#myBtnContainer {
+  text-align: center;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+.btn.focus,
+.btn:focus {
+  box-shadow: none;
+}
+
+.web {
+  width: fit-content;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* CODEPEN IMAGE PREVIEW  */
+
+.gallery-section {
+  position: relative;
+  z-index: 1;
+}
+
+.filter {
+  text-align: center;
+  max-width: 1050px;
+  margin: auto;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  max-width: 1320px;
+  flex-wrap: wrap;
+  margin: 25px auto;
+  /* gap: 14px; */
+}
+.gallery a {
+  display: flex;
+}
+.gallery img {
+  object-fit: cover;
+  transition: 0.3s ease-in-out;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 10px 10px;
+}
+
+.column img {
+  transition: 0.3s ease-in-out;
+}
+
+.column img:hover {
+  transform: scale(1.1);
+}
+
+.sets .hide,
+.sets .pophide {
+  width: 0%;
+  opacity: 0;
+}
+
+.closeBtn {
+  position: absolute;
+  font-size: 18px;
+  font-weight: 500;
+  right: 25px;
+  top: 25px;
+  color: white;
+  transition: 0.5s linear;
+  padding: 8px 40px;
+  border-radius: 25px;
+  background: #ffffff00;
+  border: none;
+}
+.closeBtn:hover {
+  color: #00c5db;
+  cursor: url("../img/hover.png"), default !important;
+}
+
+.openDiv {
+  width: 100%;
+  height: 100vh;
+  background: #000000e7;
+  backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  z-index: 9999;
+}
+.imgPreview {
+  width: 70%;
+  object-fit: scale-down;
+  max-height: 40vw;
+  height: auto;
+}
+.prevButton,
+.nextButton {
+  transition: 0.5s linear;
+  padding: 10px 19px;
+  font-size: 18px;
+  font-weight: 300;
+  border: none;
+  color: #ffffff;
+  background: #0005;
+  border-radius: 50px;
+  margin: 10px;
+}
+.prevButton:hover,
+.nextButton:hover {
+  cursor: url("../img/hover.png"), default !important;
+  background: #00c5db8a;
+  color: #ffffff;
+}
+
+/* resposive CSS Code */
+
+@media (max-width: 1199px) {
+  .section-padding {
+    padding-top: 70px;
+  }
+}
+@media (max-width: 991px) {
+  .section-padding {
+    padding-top: 50px;
+  }
+}
+@media (max-width: 767px) {
+  .title {
+    font-size: 36px;
+  }
+  .gallery img {
+    margin: 8px 8px;
+    width: 175px;
+  }
+  .closeBtn {
+    padding: 6px 25px;
+  }
+  .prevButton,
+  .nextButton {
+    font-size: 18px;
+    padding: 8px 25px;
+  }
+}
+
+@media (max-width: 540px) {
+  .section-padding {
+    padding-top: 30px;
+  }
+
+  .gallery img {
+    margin: 8px 6px;
+    width: 155px;
+  }
+
+  .closeBtn {
+    font-size: 18px;
+    border-radius: 15px;
+  }
+  .prevButton,
+  .nextButton {
+    font-size: 18px;
+    padding: 6px 20px;
+    border-radius: 10px;
+    margin: 5px;
+  }
+
+  .imgPreview {
+    width: 90%;
+    max-height: 50vh;
+    height: auto;
+  }
+}
+
+/* W3 GALLERY FILTER */
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  display: none; /* Hide columns by default */
+}
+
+/* Clear floats after rows */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  margin-right: 10px;
+  margin-left: 10px;
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 50px;
+  transition: 0.3s linear;
+}
+
+/* Add a grey background color on mouse-over */
+.btn:hover {
+  background-color: #d8fbff;
+  cursor: url("../img/hover.png"), default !important;
+}
+
+/* Add a dark background color to the active button */
+.btn.active {
+  font-weight: 500;
+  background-color: #00c5db;
+  color: #ffffff;
+}
+
+/* RESPONSIVE PORTFOLIO */
+
+.portfolio {
+  /* width: fit-content; */
+  margin: 0 auto;
+}
+
+.portfolio img {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  margin-right: 25px;
+  margin-left: 25px;
+  margin-top: 13px;
+  margin-bottom: 13px;
+  border-radius: 10px;
+}
+
+@media only screen and (max-width: 500px) {
+  .portfolio img {
+    height: 170px;
+    width: 170px;
+    margin-right: 8px;
+    margin-left: 8px;
+  }
+}
+
+.portfolio .row {
+  margin: 0 auto;
+}
+
+@media (min-width: 320px) {
+  .portfolio .row {
+    width: 372px;
+  }
+}
+@media (min-width: 481px) {
+  .portfolio .row {
+    width: 372px;
+  }
+}
+@media (min-width: 641px) {
+  .portfolio .row {
+    width: 750px;
+  }
+}
+@media (min-width: 961px) {
+  .portfolio .row {
+    width: 750px;
+  }
+}
+@media (min-width: 1025px) {
+  .portfolio .row {
+    width: 1250px;
+  }
+}
+@media (min-width: 1281px) {
+  .portfolio .row {
+    width: 1250px;
+  }
+}
