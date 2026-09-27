@@ -11,7 +11,7 @@
 --------------------------------------------------------------*/
 
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 5px;
 }
 ::-webkit-scrollbar-track {
@@ -20,7 +20,7 @@
 ::-webkit-scrollbar-thumb {
   background-color: #00c5db;
   border-radius: 10px;
-}
+} */
 
 ::selection {
   background: #5aefff44; /* WebKit/Blink Browsers */
@@ -1449,8 +1449,8 @@ section {
 
 
 /* ==========================================
-   NETFLIX ISOLATED CAROUSEL CORE LAYOUT
-   ========================================== */
+NETFLIX ISOLATED CAROUSEL CORE LAYOUT
+========================================== */
 
 /* Main outer section wrapper */
 .nx-carousel-section {
