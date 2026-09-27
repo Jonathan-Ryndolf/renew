@@ -64,7 +64,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Montserrat;
+  font-family: Poppins;
 }
 
 /*--------------------------------------------------------------
@@ -217,7 +217,6 @@ h6 {
   font-size: 15px;
   padding: 8 16px;
   letter-spacing: 0.4px;
-  font-family: Poppins;
   font-weight: 500;
   transition: all 0.3s ease-in-out 0s;
   background-color: #ffffff00;
@@ -476,6 +475,59 @@ h6 {
   height: 100%;
 }
 
+.hero-container {
+  position: relative;
+}
+
+.hero-logo {
+  margin-top: 2%;
+  margin-left: 5%;
+  width: 45px;
+  position: absolute;
+}
+
+.title-logo {
+  position: absolute;
+  width: 400px;
+  margin-left: 4%;
+  margin-top: 15%;
+}
+
+.hero-deets {
+  color: #ffffff;
+  position: absolute;
+  margin-left: 5%;
+  margin-top: 27%;
+}
+
+.genre-stuff {
+  color: #ffffff;
+  position: absolute;
+  display: flex;
+}
+
+.genre {
+  font-size: 15px;
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+.genre-1 {
+  font-size: 15px;
+}
+
+.genre-dot {
+  color: #ffffff46;
+  margin-top: -40;
+  font-size: 50px;
+  margin-right: 10px;
+}
+
+.para {
+  margin-top: 7%;
+  font-size: 20px;
+}
+
 .badgecolor {
   backdrop-filter: blur(5px);
   background-color: #000000b6;
@@ -498,22 +550,6 @@ h6 {
   right: 0;
 }
 
-/* #hero .hero-container,
-#blog .hero-container {
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  padding: 0 15px;
-  z-index: 5;
-} */
 
 @keyframes animatedText {
   from {
@@ -562,7 +598,6 @@ h6 {
 
 #hero .btn-get-started,
 #blog .btn-get-started {
-  font-family: Montserrat;
   text-transform: uppercase;
   font-weight: 400;
   font-size: 13px;
