@@ -1449,110 +1449,149 @@ section {
 
 
 /* ==========================================
-NETFLIX ISOLATED CAROUSEL CORE LAYOUT
-========================================== */
+  NETFLIX BLEEDING & FADING CAROUSEL CORE
+  ========================================== */
 
-/* Main outer section wrapper */
-.nx-carousel-section {
-  padding: 20px 4%;
+  .nx-carousel-section {
+  padding: 20px 0; /* 💡 CHANGED: Remove side padding so track can touch screen edges */
   background-color: #141414;
   position: relative;
   box-sizing: border-box;
+  overflow: hidden; /* Keeps scrollbars invisible */
 }
 
-/* Category Title block */
 .nx-carousel-heading {
-  color: #e5e5e5;
-  font-size: 1.4rem;
-  margin-bottom: 12px;
-  font-weight: 700;
+    color: #e5e5e5;
+    font-size: 1.4rem;
+    margin-left: 4%; /* 💡 ADDED: Keeps the text title aligned with normal page text */
+    margin-bottom: 12px;
+    font-weight: 700;
 }
 
-/* Base relative wrapper anchoring the buttons and track window */
 .nx-carousel-base-wrapper {
-  position: relative;
-  display: flex !important; /* Forces layout mode over vendor overrides */
-  align-items: center;
-  width: 100% !important;
+    position: relative;
+    display: flex !important;
+    align-items: center;
+    width: 100% !important;
+    
+    /* 💡 THE FADE EFFECT MAGIC: Applies a transparency gradient mask across the edges */
+    /* This makes the items naturally appear dim/lower opacity as they touch the left and right window borders */
+    -webkit-mask-image: linear-gradient(to right, 
+        transparent 0%, 
+        #000 4%, 
+        #000 96%, 
+        transparent 100%
+    );
+    mask-image: linear-gradient(to right, 
+        transparent 0%, 
+        #000 4%, 
+        #000 96%, 
+        transparent 100%
+    );
 }
 
-/* The viewport structural clip mask container */
 .nx-carousel-clip-viewport {
-  width: 100% !important;
-  overflow: hidden !important;
-  padding: 15px 0 !important; /* Safety padding allows cards to expand on hover without cut-offs */
-  display: block !important;
+    width: 100% !important;
+    overflow: hidden!important; /* 💡 CHANGED: Allows items to bleed past parent container barriers */
+    padding: 50px 0 !important;
+    display: block !important;
 }
 
-/* The moving layout flex belt track */
 .nx-carousel-moving-track {
-  display: flex !important;
-  gap: 10px !important;
-  width: 100% !important;
-  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1) !important;
-  margin: 0 !important;
-  padding: 0 !important;
+    display: flex !important;
+    gap: 10px !important;
+    width: 100% !important;
+    /* 💡 START ALIGNMENT: Margins align the track elements with the heading text layout line */
+    padding-left: 4% !important; 
+    padding-right: 4% !important;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1) !important;
 }
 
-/* 5 Visible Cards Sizing Framework (Forced Minimum Boundaries) */
 .nx-carousel-card-item {
-  flex: 0 0 calc(20% - 8px) !important; 
-  width: calc(20% - 8px) !important;     
-  min-width: 220px !important;            /* Hard stop baseline prevents shrinking to 0px on low-res frames */
-  height: 145px !important;               /* Static vertical structure guarantees container remains visible */
-  border-radius: 4px !important;
-  overflow: hidden !important;
-  cursor: pointer !important;
-  position: relative !important;
-  background-color: #2a2a2a !important;   /* Solid color block backup while media content downloads */
-  transition: transform 0.3s cubic-bezier(0.25, 1, 0.25, 1), box-shadow 0.3s ease !important;
+    flex: 0 0 calc(20% - 8px) !important; 
+    width: calc(20% - 8px) !important;     
+    min-width: 0 !important;
+    aspect-ratio: 16 / 9 !important;
+    height: auto !important;
+    border-radius: 4px !important;
+    overflow: hidden !important;
+    cursor: pointer !important;
+    position: relative !important;
+    background-color: #2a2a2a !important;
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.25, 1), box-shadow 0.3s ease !important;
 }
 
-/* Force image rules to stretch and fill the target custom card box */
 .nx-carousel-card-item img {
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
-  display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
 }
 
-/* Magnification Scale Focus on Cursor Pointer Hover */
 .nx-carousel-card-item:hover {
-  transform: scale(1.08) !important;
-  box-shadow: 0px 10px 22px rgba(0, 0, 0, 0.75) !important;
-  z-index: 99 !important; /* Pops element physically over neighboring elements */
+    transform: scale(1.5) !important;
+    z-index: 99 !important;
 }
 
-/* Manual Action Button Interface Bars */
+/* ==========================================
+NETFLIX ARROW CONTROLS WITH SMOOTH GRADIENT TRANSITIONS
+========================================== */
+
 .nx-carousel-arrow-btn {
-  position: absolute !important;
-  top: 50% !important;
-  transform: translateY(-50%) !important;
-  background-color: rgba(0, 0, 0, 0.5) !important;
-  color: #ffffff !important;
-  border: none !important;
-  font-size: 2rem !important;
-  padding: 0 15px !important;
-  cursor: pointer !important;
-  z-index: 100 !important; /* Stays locked on top of active sliding track items */
-  height: calc(100% - 30px) !important;
-  transition: background-color 0.2s ease !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    background-color: transparent !important; /* Fully clear base */
+    color: #ffffff !important;
+    border: none !important;
+    font-size: 1.5rem;
+    width: 4%; 
+    cursor: pointer !important;
+    z-index: 100 !important; 
+    height: calc(60%) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 30px;
+    overflow: hidden; /* Keeps the internal animation layer completely contained */
 }
 
-.nx-carousel-arrow-btn:hover {
-  background-color: rgba(0, 0, 0, 0.85) !important;
+/* 💡 THE CURE: Create an invisible placeholder background layer inside the buttons */
+.nx-carousel-arrow-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0; /* Hidden by default */
+    z-index: -1; /* Sits cleanly behind the white arrow symbol icon */
+    
+    /* 💡 Transitioning the opacity property guarantees a perfectly smooth fade ease curve */
+    transition: opacity 0.4s ease-in-out !important; 
 }
 
-/* Left & Right layout positional controls */
+/* Fade in the background layer whenever the cursor hovers on the button parent */
+.nx-carousel-arrow-btn:hover::before {
+    opacity: 1; 
+}
+
+/* LEFT CONTROLLER PROPERTIES */
 .nx-carousel-arrow-btn.nx-btn-left {
-  left: 0 !important;
-  border-radius: 0 4px 4px 0 !important;
+    padding-left: 4%;
+    left: 0 !important;
 }
 
+.nx-carousel-arrow-btn.nx-btn-left::before {
+    background: linear-gradient(90deg, #000000df 60%, rgba(0,0,0,0) 100%) !important;
+}
+
+/* RIGHT CONTROLLER PROPERTIES */
 .nx-carousel-arrow-btn.nx-btn-right {
-  right: 0 !important;
-  border-radius: 4px 0 0 4px !important;
+    padding-right: 4%;
+    right: 0 !important;
+}
+
+.nx-carousel-arrow-btn.nx-btn-right::before {
+    background: linear-gradient(270deg, #000000df 60%, rgba(0,0,0,0) 100%) !important;
 }
