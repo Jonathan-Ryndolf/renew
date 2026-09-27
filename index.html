@@ -99,18 +99,32 @@
     <!-- ======= Portfolio Section ======= -->
 
     <section id="portfolio" class="portfolio">
-      <div class="section-title d-flex">
-        <div class="grad-l">S</div><h3>PORTFOLIO</h3><div class="grad-r">S</div> 
-        </div>
 
-          <div id="myBtnContainer">
-            <button class="btn active" onclick="filterSelection('freelance')">Freelance</button>
-            <button class="btn" onclick="filterSelection('digital')">Digital Art</button>
-            <button class="btn" onclick="filterSelection('sketches')">Sketches</button>
-            <button class="btn" onclick="filterSelection('3d')">3D & Video</button>
-            <button class="btn" onclick="filterSelection('webdev')">Web Dev</button>
-            <button class="btn" onclick="filterSelection('photos')">Photography</button>
-          </div>
+      <!-- HORIZONTAL CAROUSEL CONTAINER -->
+      <section class="nx-carousel-section">
+        <h2 class="nx-carousel-heading">Trending Now</h2>
+        
+        <div class="nx-carousel-base-wrapper">
+            <!-- Direction Control Action Bars -->
+            <button class="nx-carousel-arrow-btn nx-btn-left" onclick="moveNxCarousel(-1)">&#10094;</button>
+            <button class="nx-carousel-arrow-btn nx-btn-right" onclick="moveNxCarousel(1)">&#10095;</button>
+            
+            <!-- Clipping Window Framework -->
+            <div class="nx-carousel-clip-viewport">
+                <div class="nx-carousel-moving-track" id="nxMovieTrack">
+                    <div class="nx-carousel-card-item"><img src="assets/img/portfolio/freelance/kobras.jpg" alt="Card 1"></div>
+                    <div class="nx-carousel-card-item"><img src="assets/img/portfolio/freelance/midas.jpg" alt="Card 2"></div>
+                    <div class="nx-carousel-card-item"><img src="https://unsplash.com" alt="Card 3"></div>
+                    <div class="nx-carousel-card-item"><img src="https://unsplash.com" alt="Card 4"></div>
+                    <div class="nx-carousel-card-item"><img src="https://unsplash.com" alt="Card 5"></div>
+                    <div class="nx-carousel-card-item"><img src="https://unsplash.com" alt="Card 6"></div>
+                    <div class="nx-carousel-card-item"><img src="https://unsplash.com" alt="Card 7"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
           
           <!-- Portfolio Gallery Grid -->
           <div class="row">
@@ -123,159 +137,17 @@
             <div class="column freelance"><img src="assets/img/portfolio/freelance/clglogo.jpg"></div>
             <div class="column freelance"><img src="assets/img/portfolio/freelance/dolphin.jpg"></div>
             <div class="column freelance"><img src="assets/img/portfolio/freelance/dropset.jpg"></div>
-            <div class="column freelance"><img src="assets/img/portfolio/freelance/ea.jpg"></div>
-            <div class="column freelance"><img src="assets/img/portfolio/freelance/face.png"></div>
-            <div class="column freelance"><img src="assets/img/portfolio/freelance/fox.png"></div>
-            <div class="column freelance"><img src="assets/img/portfolio/freelance/gains.png"></div>
-            <div class="column freelance"><img src="assets/img/portfolio/freelance/horse.png"></div>
-            <div class="column freelance"><img src="assets/img/portfolio/freelance/hustle.png" style="object-position: 0px -10px;"></div>
-            <div class="column freelance"><img src="assets/img/portfolio/freelance/invite.jpg"></div>
-            <div class="column freelance"><img src="assets/img/portfolio/freelance/invite2.jpg"></div>
-            <div class="column freelance"><img src="assets/img/portfolio/freelance/lang.png" style="object-position: 0px 0px;"></div>
-            <div class="column freelance"><img src="assets/img/portfolio/freelance/limitless.jpg"></div>
-            <div class="column freelance"><img src="assets/img/portfolio/freelance/lo.jpg"></div>
-            <div class="column freelance"><img src="assets/img/portfolio/freelance/logo.jpg"></div>
-            <div class="column freelance"><img src="assets/img/portfolio/freelance/marski.jpg"></div>
-            <div class="column freelance"><img src="assets/img/portfolio/freelance/meerkat.jpg"></div>
-            <div class="column freelance"><img src="assets/img/portfolio/freelance/neon.jpg"></div>
-            <div class="column freelance"><img src="assets/img/portfolio/freelance/pattarai.png"></div>
-            <div class="column freelance"><img src="assets/img/portfolio/freelance/quad.jpg"></div>
-            <div class="column freelance"><img src="assets/img/portfolio/freelance/rfiy.jpg"></div>
-            <div class="column freelance"><img src="assets/img/portfolio/freelance/rfiytxt.png"></div>
-            <div class="column freelance"><img src="assets/img/portfolio/freelance/riverdale.jpg"></div>
-            <div class="column freelance"><img src="assets/img/portfolio/freelance/superset.png"></div>
-            <div class="column freelance"><img src="assets/img/portfolio/freelance/theervu.jpg"></div>
-            <div class="column freelance"><img src="assets/img/portfolio/freelance/tox.jpg"></div>
-            <div class="column freelance"><img src="assets/img/portfolio/freelance/whip.jpg"></div>
-            <div class="column freelance"><img src="assets/img/portfolio/freelance/wolf.png"></div>
-            <div class="column freelance"><img src="assets/img/portfolio/freelance/wootu.jpg"></div>
-            <div class="column freelance"><img src="assets/img/portfolio/freelance/union.jpg"></div>
-            <div class="column freelance"><img src="assets/img/portfolio/freelance/azera.jpg"></div>
-            <div class="column freelance"><img src="assets/img/portfolio/freelance/kroom.jpg"></div>
-            <div class="column freelance"><img src="assets/img/portfolio/freelance/house.gif"></div>
-            <div class="column freelance"><img src="assets/img/portfolio/freelance/drstrange.jpg"></div>
-            <div class="column freelance"><img src="assets/img/portfolio/freelance/mels.jpg"></div>
-            <div class="column freelance"><img src="assets/img/portfolio/freelance/dan.jpg"></div>
-            <div class="column freelance"><img src="assets/img/portfolio/freelance/cars.jpg"></div>
           </div>
 
 
-
-          <div class="row">
-            <div class="column digital"><img src="assets/img/portfolio/digital-art/2.jpg"></div>
-            <div class="column digital"><img src="assets/img/portfolio/digital-art/3000.jpg"></div>
-            <div class="column digital"><img src="assets/img/portfolio/digital-art/antman.jpg"></div>
-            <div class="column digital"><img src="assets/img/portfolio/digital-art/aot.jpg" style="object-position: 0px 0px;"></div>
-            <div class="column digital"><img src="assets/img/portfolio/digital-art/astronaut.jpg"></div>
-            <div class="column digital"><img src="assets/img/portfolio/digital-art/boat.jpg"></div>
-            <div class="column digital"><img src="assets/img/portfolio/digital-art/breakingbad.jpg"></div>
-            <div class="column digital"><img src="assets/img/portfolio/digital-art/cap.jpg"></div>
-            <div class="column digital"><img src="assets/img/portfolio/digital-art/dog1.jpg"></div>
-            <div class="column digital"><img src="assets/img/portfolio/digital-art/dog2.jpg"></div>
-            <div class="column digital"><img src="assets/img/portfolio/digital-art/elephant.jpg"></div>
-            <div class="column digital"><img src="assets/img/portfolio/digital-art/endgame.jpg"></div>
-            <div class="column digital"><img src="assets/img/portfolio/digital-art/happy.png"></div>
-            <div class="column digital"><img src="assets/img/portfolio/digital-art/ironman.jpg"></div>
-            <div class="column digital"><img src="assets/img/portfolio/digital-art/life.jpg"></div>
-            <div class="column digital"><img src="assets/img/portfolio/digital-art/mike.jpg"></div>
-            <div class="column digital"><img src="assets/img/portfolio/digital-art/mom.jpg"></div>
-            <div class="column digital"><img src="assets/img/portfolio/digital-art/oldman.jpg"></div>
-            <div class="column digital"><img src="assets/img/portfolio/digital-art/peppa.jpg"></div>
-            <div class="column digital"><img src="assets/img/portfolio/digital-art/phone.jpg"></div>
-            <div class="column digital"><img src="assets/img/portfolio/digital-art/polaroids.jpg"></div>
-            <div class="column digital"><img src="assets/img/portfolio/digital-art/retro.png"></div>
-            <div class="column digital"><img src="assets/img/portfolio/digital-art/sheldon.jpg"></div>
-            <div class="column digital"><img src="assets/img/portfolio/digital-art/spidey.jpg"></div>
-            <div class="column digital"><img src="assets/img/portfolio/digital-art/st.jpg"></div>
-            <div class="column digital"><img src="assets/img/portfolio/digital-art/stark.jpg"></div>
-            <div class="column digital"><img src="assets/img/portfolio/digital-art/starwars.jpg"></div>
-            <div class="column digital"><img src="assets/img/portfolio/digital-art/time.jpg"></div>
-            <div class="column digital"><img src="assets/img/portfolio/digital-art/track.jpg"></div>
-            <div class="column digital"><img src="assets/img/portfolio/digital-art/underwater.jpg"></div>
-            <div class="column digital"><img src="assets/img/portfolio/digital-art/tom.jpg" style="object-position: 0px 0px;"></div>
-            <div class="column digital"><img src="assets/img/portfolio/digital-art/spidey4.jpg" style="object-position: -170px 0px;"></div>
-          </div>
-
-
-
-          <div class="row">
-            <div class="column sketches"><img src="assets/img/portfolio/sketches/0.jpg"></div>
-            <div class="column sketches"><img src="assets/img/portfolio/sketches/1.jpg"></div>
-            <div class="column sketches"><img src="assets/img/portfolio/sketches/2.jpg"></div>
-            <div class="column sketches"><img src="assets/img/portfolio/sketches/3.jpg"></div>
-            <div class="column sketches"><img src="assets/img/portfolio/sketches/4.jpg"></div>
-            <div class="column sketches"><img src="assets/img/portfolio/sketches/5.jpg"></div>
-            <div class="column sketches"><img src="assets/img/portfolio/sketches/6.jpg"></div>
-            <div class="column sketches"><img src="assets/img/portfolio/sketches/7.jpg"></div>
-            <div class="column sketches"><img src="assets/img/portfolio/sketches/8.jpg"></div>
-            <div class="column sketches"><img src="assets/img/portfolio/sketches/9.jpg"></div>
-            <div class="column sketches"><img src="assets/img/portfolio/sketches/10.jpg"></div>
-            <div class="column sketches"><img src="assets/img/portfolio/sketches/11.jpg"></div>
-          </div>
-
-
-
-          <div class="row">
-            <div class="column 3d"><video controls><source src="assets/img/portfolio/3dnvideos/fox.mp4"></video></div>
-            <div class="column 3d"><video controls><source src="assets/img/portfolio/3dnvideos/roll.mp4"></video></div>
-            <div class="column 3d"><img src="assets/img/portfolio/3dnvideos/castle.jpg"></div>
-            <div class="column 3d"><img src="assets/img/portfolio/3dnvideos/design.gif" style="width: fit-content;"></div>
-            <div class="column 3d"><img src="assets/img/portfolio/3dnvideos/roll.gif" style="width: fit-content;"></div>
-            <div class="column 3d"><img src="assets/img/portfolio/3dnvideos/glass.gif"></div>
-            <div class="column 3d"><img src="assets/img/portfolio/3dnvideos/Planet.gif"></div>
-            <div class="column 3d"><img src="assets/img/portfolio/3dnvideos/pin.gif"></div>
-          </div>
-
-
-
-          <div class="row">
-            <div class="column webdev"><a href="https://ryndolf-portfolio.vercel.app/" target="_blank"><img src="assets/img/portfolio/webdev/ryndolf.png"></a></div>
-            <div class="column webdev"><a href="https://jonathan-ryndolf.github.io/the-code/" target="_blank"><img src="assets/img/portfolio/webdev/code.png"></a></div>
-            <div class="column webdev"><a href="https://case-history-omega.vercel.app/" target="_blank"><img src="assets/img/portfolio/webdev/case.png" style="object-position: 0px 0px;"></a></div>
-          </div>
-
-
-
-          <div class="row">
-            <div class="column photos"><img src="assets/img/portfolio/photography/6.jpg"></div>
-            <div class="column photos"><img src="assets/img/portfolio/photography/angle.jpg" style="object-position: 0px 0px;"></div>
-            <div class="column photos"><img src="assets/img/portfolio/photography/angle2.jpg"></div>
-            <div class="column photos"><img src="assets/img/portfolio/photography/angle3.jpg"></div>
-            <div class="column photos"><img src="assets/img/portfolio/photography/bird.jpg"></div>
-            <div class="column photos"><img src="assets/img/portfolio/photography/boat.jpg"></div>
-            <div class="column photos"><img src="assets/img/portfolio/photography/branches.jpg"></div>
-            <div class="column photos"><img src="assets/img/portfolio/photography/build.jpg"></div>
-            <div class="column photos"><img src="assets/img/portfolio/photography/cat1.jpg"></div>
-            <div class="column photos"><img src="assets/img/portfolio/photography/cat2.jpg"></div>
-            <div class="column photos"><img src="assets/img/portfolio/photography/dog2.jpg"></div>
-            <div class="column photos"><img src="assets/img/portfolio/photography/dogs.jpg"></div>
-            <div class="column photos"><img src="assets/img/portfolio/photography/dragonfly.jpg"></div>
-            <div class="column photos"><img src="assets/img/portfolio/photography/flower1.jpg"></div>
-            <div class="column photos"><img src="assets/img/portfolio/photography/fly.jpg"></div>
-            <div class="column photos"><img src="assets/img/portfolio/photography/goldbranches.jpg"></div>
-            <div class="column photos"><img src="assets/img/portfolio/photography/hills.jpg"></div>
-            <div class="column photos"><img src="assets/img/portfolio/photography/insect.jpg"></div>
-            <div class="column photos"><img src="assets/img/portfolio/photography/lizard.jpg"></div>
-            <div class="column photos"><img src="assets/img/portfolio/photography/mushrooms.jpg"></div>
-            <div class="column photos"><img src="assets/img/portfolio/photography/shells.jpg"></div>
-            <div class="column photos"><img src="assets/img/portfolio/photography/strings.jpg"></div>
-            <div class="column photos"><img src="assets/img/portfolio/photography/tree.jpg"></div>
-            <div class="column photos"><img src="assets/img/portfolio/photography/vk.jpg"></div>
-            <div class="column photos"><img src="assets/img/portfolio/photography/water.jpg"></div>
-          </div>
 
     </section>
     <!-- End Portfolio Section -->
 
     <!-- ======= Footer ======= -->
-    <div class="footer-img text-center">
-      <img src="assets/img/bitmoji/footer.png" />
-    </div>
+
     <footer id="footer">
       <div class="container">
-        <div class="mb-4">
-          <img src="assets/img/favicon.jpg">
-        </div>
         <p>
           If You don't follow your heart, Who will?
         </p>

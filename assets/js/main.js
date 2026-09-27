@@ -207,3 +207,35 @@
     return false;
   });
 })(jQuery);
+
+
+
+let nxCurrentSlideIndex = 0;
+
+function moveNxCarousel(direction) {
+    const track = document.getElementById('nxMovieTrack');
+    const items = document.querySelectorAll('.nx-carousel-card-item');
+    
+    if (!track || items.length === 0) return;
+
+    const totalItems = items.length;
+    const itemsVisible = 5; 
+    const maxIndex = totalItems - itemsVisible;
+
+    nxCurrentSlideIndex += direction;
+
+    // Constrain inside viewport limits
+    if (nxCurrentSlideIndex < 0) {
+        nxCurrentSlideIndex = 0;
+    } else if (nxCurrentSlideIndex > maxIndex) {
+        nxCurrentSlideIndex = maxIndex;
+    }
+
+    // Measure the precise pixel width boundary of the isolated custom items
+    const itemWidth = items[0].getBoundingClientRect().width;
+    const gapWidth = 10; 
+    
+    // Shift track container left smoothly
+    const shiftAmount = nxCurrentSlideIndex * (itemWidth + gapWidth);
+    track.style.transform = `translateX(-${shiftAmount}px)`;
+}
