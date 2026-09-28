@@ -23,7 +23,7 @@
 } */
 
 ::selection {
-  background: #5aefff44; /* WebKit/Blink Browsers */
+  background: #ff5a5a44; /* WebKit/Blink Browsers */
 }
 
 
@@ -33,13 +33,6 @@
   padding: 0;
 }
 
-*:hover {
-  cursor: url("../img/hover.png"), default !important;
-}
-
-html {
-  cursor: url("../img/cursor1.png"), default !important;
-}
 
 body {
   color: #000000;
@@ -763,7 +756,7 @@ h6 {
     transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1) !important;
 }
 
-#c1 .nx-carousel-card-item {
+#c01 .nx-carousel-card-item {
     flex: 0 0 calc(20% - 8px) !important; 
     width: 20% !important;     
     min-width: 0 !important;
@@ -777,14 +770,14 @@ h6 {
     transition: transform 0.3s cubic-bezier(0.25, 1, 0.25, 1), box-shadow 0.3s ease !important;
 }
 
-#c1 .nx-carousel-card-item img {
+#c01 .nx-carousel-card-item img {
     width: 100% !important;
     height: 100% !important;
     object-fit: cover !important;
     display: block !important;
 }
 
-#c1 .nx-carousel-card-item:hover {
+#c01 .nx-carousel-card-item:hover {
     transform: scale(1.5) !important;
     z-index: 99 !important;
     border-radius: 5px !important;
@@ -794,7 +787,7 @@ h6 {
 NETFLIX ARROW CONTROLS WITH SMOOTH GRADIENT TRANSITIONS
 ========================================== */
 
-.nx-carousel-arrow-btn {
+#c01 .nx-carousel-arrow-btn {
     position: absolute !important;
     top: 50% !important;
     transform: translateY(-50%) !important;
@@ -1186,12 +1179,11 @@ body.modal-open-lock {
       transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1) !important;
   }
 
-  
-#c2 .nx-carousel-card-item {
+#c02 .nx-carousel-card-item {
   flex: 0 0 calc(20% - 8px) !important;     
   aspect-ratio: 11 / 9 !important;
   border-radius: 15px !important;
-  overflow: hidden !important;
+  overflow: visible !important;
   cursor: pointer !important;
   position: relative !important;
   transition: transform 0.3s cubic-bezier(0.25, 1, 0.25, 1), box-shadow 0.3s ease !important;
@@ -1200,7 +1192,7 @@ body.modal-open-lock {
 
   
 
-  #c2 .num-img {
+  #c02 .num-img {
     margin-left: 30%;
     width: 50% !important;     
     aspect-ratio: 2 / 3 !important;
@@ -1211,17 +1203,22 @@ body.modal-open-lock {
     box-shadow: -30px 0px 40px #151515 !important;
   }
 
-  #c2 .num-img img {
+  #c02 .num-img img {
     width: 100% !important;
     height: 100% !important;
     object-fit: cover !important;
     display: block !important;
   }
   
-#c2 .num-img:hover {
+#c02 .num-img:hover {
+  margin-top: 20px;
+  margin-left: 0;
+  width: 100% !important; 
+    aspect-ratio: 16 / 9 !important;
     transform: scale(1.5) !important;
     z-index: 99 !important;
-    border-radius: 5px !important;
+    border-radius: 5px !important; 
+    box-shadow: -30px 0px 40px #00000000 !important;
 }
 
 .num {
@@ -1237,9 +1234,10 @@ body.modal-open-lock {
   NETFLIX ARROW CONTROLS WITH SMOOTH GRADIENT TRANSITIONS
   ========================================== */
   
-  .nx-carousel-arrow-btn {
+#c02  .nx-carousel-arrow-btn {
       position: absolute !important;
-      top: 50% !important;
+      height: 65% !important;
+      top: 47% !important;
       transform: translateY(-50%) !important;
       background-color: transparent !important; /* Fully clear base */
       color: #ffffff !important;
@@ -1248,7 +1246,6 @@ body.modal-open-lock {
       width: 4%; 
       cursor: pointer !important;
       z-index: 100 !important; 
-      height: calc(61%) !important;
       display: flex !important;
       align-items: center !important;
       justify-content: center !important;

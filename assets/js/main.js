@@ -31,7 +31,8 @@
   // Stores and tracks separate current slide positions for each unique row section ID
   let carouselPositions = {
       'c1': 0, // Row 1 positional indicator tracking channel
-      'c2': 0  // Row 2 positional indicator tracking channel
+      'c2': 0,  // Row 2 positional indicator tracking channel
+      'c3': 0
   };
   
   function moveNxCarousel(direction, trackId) {
@@ -74,7 +75,7 @@
   
   // Global window screen listener resets layout shifts cleanly if browser drops scale metrics
   window.addEventListener('resize', () => {
-      carouselPositions = { 'c1': 0, 'c2': 0 };
+      carouselPositions = { 'c1': 0, 'c2': 0, 'c3': 0 };
       document.querySelectorAll('.nx-carousel-moving-track').forEach(track => {
           track.style.transform = 'translateX(0px)';
       });
