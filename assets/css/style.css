@@ -89,14 +89,32 @@ h6 {
 /* Desktop Navigation */
 
 i {
-  font-size: 25px;
+  font-size: 25px !important;
   color: #ffffff;
-  margin-top: 1%;
-  margin-left: 62%;
+  margin-top: 1% !important;
+  margin-left: 68% !important;
+  cursor: pointer;
+  background-color: #ffffff00;
+  border-radius: 50px;
+  padding: 5px 11.5px !important;
+  transition: all 0.2s ease;
+}
+
+i:hover {
+  background-color: #ffffff3b;
+}
+
+.nav-menu img {
+  margin-top: 62.6%;
+  margin-left: 50%;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
 }
 
 .ri-notification-3-line {
-  margin-left: 3% !important;
+  margin-left: 1% !important;
+  margin-top: 20% !important;
 }
 
 .nav-menu {
@@ -120,7 +138,7 @@ i {
   padding: 10px 0 10px 15px;
 }
 
-.nav-menu a {
+.nav-menu li > a {
   display: block;
   position: relative;
   color: #b4b4b4;
@@ -134,15 +152,14 @@ i {
   border-radius: 50px;
 }
 
-.nav-menu .active > a {
+.nav-menu .active li > a {
   color: #ffffff;
   background-color: #ffffff37;
   font-weight: 600;
   text-decoration: none;
 }
 
-.nav-menu a:hover,
-.nav-menu li:hover > a {
+.nav-menu li > a:hover {
   background-color: #ffffff1b;
   text-decoration: none;
 }
@@ -175,8 +192,6 @@ i {
 }
 
 .nav-menu .drop-down ul a {
-  padding: 10px 20px;
-  font-size: 14px;
   text-transform: none;
   color: #ffffff;
 }
@@ -1061,7 +1076,7 @@ NETFLIX ARROW CONTROLS WITH SMOOTH GRADIENT TRANSITIONS
 }
 
 .btn-confirm:hover {
-  color: #ff0000;
+  color: #000000;
   background-color: #ffffff;
 }
 
@@ -1265,4 +1280,126 @@ body.modal-open-lock {
   object-fit: cover !important;
   display: block !important;
   transition: opacity 0.4s ease-in-out !important; /* Smooth fade effect */
+}
+
+/* =============================================================
+NETFLIX BELL INTERACTIVE DROPDOWN MESSAGES
+   ============================================================= */
+
+/* The relative anchor box keeping the dropdown floating in place */
+.nx-nav-notification-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  margin: 0 15px; /* Adds uniform spacing away from neighboring nav items */
+}
+
+.nx-bell-trigger {
+  font-size: 20px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+/* THE FLOATING DROPDOWN WINDOW TRAY */
+.nx-notification-dropdown {
+  position: absolute;
+  top: calc(
+    100% + 15px
+  ); /* Forces it safely down below the main navigation menu bar line */
+  right: -20px; /* Aligns the box comfortably to the right layout margins */
+  width: 320px;
+  background-color: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+
+  /* 💡 THE CURE PART 2: Invisible states animating smoothly to full opacity visual on hover */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* 💡 TRIGGER HOVER STATE: Reveals the panel seamlessly when the cursor glides over the parent wrapper */
+.nx-nav-notification-wrapper:hover .nx-notification-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Tiny structural indicator caret pointing upward to the navbar */
+.nx-notif-arrow {
+  position: absolute;
+  top: -6px;
+  right: 23px;
+  width: 10px;
+  height: 10px;
+  background-color: rgba(0, 0, 0, 0.95);
+  border-left: 1px solid rgba(255, 255, 255, 0.15);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  transform: rotate(45deg);
+}
+
+/* MESSAGES LIST BOX */
+.nx-notif-list {
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 5px 0 !important;
+}
+
+.nx-notif-item {
+  padding: 15px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  transition: background-color 0.2s ease;
+}
+
+.nx-notif-item:last-child {
+  border-bottom: none; /* Strips bottom border cutoff from last row line */
+}
+
+/* Change message background separately on individual list item rows */
+.nx-notif-item:hover {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+.nx-notif-item p {
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+  color: #cccccc !important;
+  margin: 0 !important;
+}
+
+.nx-notif-item p strong {
+  color: #ffffff !important;
+}
+
+/* Optional indicator badge dot for unread notification item tracking updates */
+.nx-notif-dot {
+  width: 6px;
+  height: 6px;
+  background-color: #00c5db; /* Clean cyan accent unread token */
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 6px;
+}
+
+/* Dimmed treatment look for read message status targets */
+.nx-notif-item.read p {
+  color: #777777 !important;
+}
+
+/* Clean circular constraint helper layout class for your navigation login user profile portrait */
+.nx-nav-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  object-fit: cover;
+  margin-left: 15px;
+  vertical-align: middle;
 }

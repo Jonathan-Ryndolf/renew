@@ -195,8 +195,7 @@ if (playButton) {
     if (!isPlayButtonUnlocked) {
       event.preventDefault();
 
-      if (selectedOptionText)
-        selectedOptionText.textContent = "Payemnt mode...";
+      if (selectedOptionText) selectedOptionText.textContent = "Pay with...";
       if (secureSelectValue) secureSelectValue.value = "default";
 
       document.body.classList.add("modal-open-lock");
