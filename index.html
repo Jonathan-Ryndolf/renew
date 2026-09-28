@@ -87,7 +87,7 @@
         </div>
         <div class="para">hello everyone uhdfiaubdf ajkdsajbd uibdfmns adashibdsa dzhdbfa duiaghs</div>
         <div class="play">
-          <div class="play-1"><a href="/renew.html">Play</a></div>
+          <div class="play-1"><a href="/renew.html" id="heroPlayBtn">Play</a></div>
           <div class="play-2">More Info</div>
         </div>
       </div>
@@ -102,6 +102,28 @@
       </div>
     </div>
   </section>
+<!-- ==========================================
+    NATIVE DIALOG MODAL BOX STRUCTURE
+    ========================================== -->
+<dialog id="favDialog">
+  <form>
+    <p>
+      <label style="color: #000;"> <!-- Added inline color color fix for reading against light backgrounds temporarily -->
+        Favorite animal:
+        <select>
+          <option value="default">Choose…</option>
+          <option value="brine">Brine shrimp</option>
+          <option value="unlock_key">Red panda</option> <!-- 💡 THE UNLOCK CHOICE -->
+          <option value="monkey">Spider monkey</option>
+        </select>
+      </label>
+    </p>
+    <div>
+      <button value="cancel" formmethod="dialog">Cancel</button>
+      <button id="confirmBtn" value="default">Confirm</button>
+    </div>
+  </form>
+</dialog>
   <!-- End Hero -->
 
   <main id="main">
