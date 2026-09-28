@@ -88,7 +88,7 @@ h6 {
 --------------------------------------------------------------*/
 /* Desktop Navigation */
 
-i {
+#header i {
   font-size: 25px !important;
   color: #ffffff;
   margin-top: 1% !important;
@@ -96,25 +96,20 @@ i {
   cursor: pointer;
   background-color: #ffffff00;
   border-radius: 50px;
-  padding: 5px 11.5px !important;
+  padding: 5px 11.5px;
   transition: all 0.2s ease;
 }
 
-i:hover {
+#header i:hover {
   background-color: #ffffff3b;
 }
 
 .nav-menu img {
   margin-top: 62.6%;
-  margin-left: 50%;
+  margin-left: 230%;
   width: 30px;
   height: 30px;
   border-radius: 5px;
-}
-
-.ri-notification-3-line {
-  margin-left: 1% !important;
-  margin-top: 20% !important;
 }
 
 .nav-menu {
@@ -1288,17 +1283,14 @@ NETFLIX BELL INTERACTIVE DROPDOWN MESSAGES
 
 /* The relative anchor box keeping the dropdown floating in place */
 .nx-nav-notification-wrapper {
+  margin-top: 1.4%;
+  margin-left: 0.5%;
+  width: 0px;
   position: relative;
-  display: inline-flex;
-  align-items: center;
-  margin: 0 15px; /* Adds uniform spacing away from neighboring nav items */
 }
 
-.nx-bell-trigger {
-  font-size: 20px;
-  color: #ffffff;
-  cursor: pointer;
-  transition: color 0.2s ease;
+.nx-nav-notification-wrapper i {
+  padding: 12px !important;
 }
 
 /* THE FLOATING DROPDOWN WINDOW TRAY */
@@ -1307,7 +1299,7 @@ NETFLIX BELL INTERACTIVE DROPDOWN MESSAGES
   top: calc(
     100% + 15px
   ); /* Forces it safely down below the main navigation menu bar line */
-  right: -20px; /* Aligns the box comfortably to the right layout margins */
+  right: -55px; /* Aligns the box comfortably to the right layout margins */
   width: 320px;
   background-color: rgba(0, 0, 0, 0.95);
   backdrop-filter: blur(10px);
