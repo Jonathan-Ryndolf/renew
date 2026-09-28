@@ -701,7 +701,7 @@ h6 {
   ========================================== */
 
   .nx-carousel-section {
-  padding: 50px 0; /* 💡 CHANGED: Remove side padding so track can touch screen edges */
+  padding: 0 !important; /* 💡 CHANGED: Remove side padding so track can touch screen edges */
   background-color: #141414;
   position: relative;
   box-sizing: border-box;
@@ -1306,4 +1306,5 @@ body.modal-open-lock {
       display: block !important;
       transition: opacity 0.4s ease-in-out !important; /* Smooth fade effect */
   }
-  
+
+
