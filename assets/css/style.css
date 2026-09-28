@@ -10,7 +10,6 @@
 # General
 --------------------------------------------------------------*/
 
-
 /* ::-webkit-scrollbar {
   width: 5px;
 }
@@ -26,13 +25,11 @@
   background: #ff5a5a44; /* WebKit/Blink Browsers */
 }
 
-
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-
 
 body {
   color: #000000;
@@ -40,7 +37,6 @@ body {
   background: linear-gradient(180deg, #0d1b20 0%, #151515 15%);
   /* background: linear-gradient(180deg, #ffffff 0%, #151515 15%); */
 }
-
 
 body,
 h1,
@@ -99,7 +95,6 @@ h6 {
   color: #ffffff;
   transition: ease-in-out 0.3s;
 }
-
 
 /*--------------------------------------------------------------
 # Header
@@ -193,7 +188,6 @@ h6 {
   text-decoration: none;
 }
 
-
 .nav-menu .drop-down ul {
   border-radius: 10px;
   display: block;
@@ -227,8 +221,6 @@ h6 {
   text-transform: none;
   color: #ffffff;
 }
-
-
 
 .nav-menu .drop-down .drop-down ul {
   top: 0;
@@ -464,7 +456,6 @@ h6 {
   font-size: 20px;
 }
 
-
 .play {
   margin-top: 3%;
   width: 100%;
@@ -475,7 +466,7 @@ h6 {
   font-weight: 600;
   color: #000000 !important;
   background-color: #ffffff;
-  width: auto; 
+  width: auto;
   padding: 10px 28px;
   border-radius: 50px;
   border: none;
@@ -499,7 +490,7 @@ h6 {
   font-weight: 600;
   color: #ffffff;
   background-color: #ffffff2d;
-  width: auto; 
+  width: auto;
   padding: 0px 20px;
   border-radius: 50px;
   border: none;
@@ -514,8 +505,6 @@ h6 {
   color: #ffffffaf;
   background-color: #ffffff17;
 }
-
-
 
 .badgecolor {
   backdrop-filter: blur(5px);
@@ -538,7 +527,6 @@ h6 {
   left: 0;
   right: 0;
 }
-
 
 @keyframes animatedText {
   from {
@@ -583,7 +571,6 @@ h6 {
   z-index: 1;
   white-space: nowrap;
 }
-
 
 #hero .btn-get-started,
 #blog .btn-get-started {
@@ -636,7 +623,6 @@ h6 {
     height: 150vh;
   }
 }
-
 
 /*--------------------------------------------------------------
 # Footer
@@ -695,12 +681,11 @@ h6 {
   font-size: 13px;
 }
 
-
 /* ==========================================
   NETFLIX BLEEDING & FADING CAROUSEL CORE
   ========================================== */
 
-  .nx-carousel-section {
+.nx-carousel-section {
   padding: 0 !important; /* 💡 CHANGED: Remove side padding so track can touch screen edges */
   background-color: #141414;
   position: relative;
@@ -709,78 +694,81 @@ h6 {
 }
 
 .nx-carousel-heading {
-    color: #e5e5e5;
-    font-size: 1.4rem;
-    margin-left: 4%; /* 💡 ADDED: Keeps the text title aligned with normal page text */
-    margin-bottom: 12px;
-    font-weight: 700;
-    position: absolute;
+  color: #e5e5e5;
+  font-size: 1.4rem;
+  margin-left: 4%; /* 💡 ADDED: Keeps the text title aligned with normal page text */
+  margin-bottom: 12px;
+  font-weight: 700;
+  position: absolute;
 }
 
 .nx-carousel-base-wrapper {
-    position: relative;
-    display: flex !important;
-    align-items: center;
-    width: 100% !important;
-    
-    /* 💡 THE FADE EFFECT MAGIC: Applies a transparency gradient mask across the edges */
-    /* This makes the items naturally appear dim/lower opacity as they touch the left and right window borders */
-    -webkit-mask-image: linear-gradient(to right, 
-        transparent 0%, 
-        #000 4%, 
-        #000 96%, 
-        transparent 100%
-    );
-    mask-image: linear-gradient(to right, 
-        transparent 0%, 
-        #000 4%, 
-        #000 96%, 
-        transparent 100%
-    );
+  position: relative;
+  display: flex !important;
+  align-items: center;
+  width: 100% !important;
+
+  /* 💡 THE FADE EFFECT MAGIC: Applies a transparency gradient mask across the edges */
+  /* This makes the items naturally appear dim/lower opacity as they touch the left and right window borders */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 4%,
+    #000 96%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 4%,
+    #000 96%,
+    transparent 100%
+  );
 }
 
 .nx-carousel-clip-viewport {
-    width: 100% !important;
-    overflow: hidden!important; /* 💡 CHANGED: Allows items to bleed past parent container barriers */
-    padding: 50px 0 !important;
-    display: block !important;
+  width: 100% !important;
+  overflow: hidden !important; /* 💡 CHANGED: Allows items to bleed past parent container barriers */
+  padding: 50px 0 !important;
+  display: block !important;
 }
 
 .nx-carousel-moving-track {
-    display: flex !important;
-    gap: 10px !important;
-    width: 100% !important;
-    /* 💡 START ALIGNMENT: Margins align the track elements with the heading text layout line */
-    padding-left: 4% !important; 
-    padding-right: 4% !important;
-    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1) !important;
+  display: flex !important;
+  gap: 10px !important;
+  width: 100% !important;
+  /* 💡 START ALIGNMENT: Margins align the track elements with the heading text layout line */
+  padding-left: 4% !important;
+  padding-right: 4% !important;
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1) !important;
 }
 
 #c01 .nx-carousel-card-item {
-    flex: 0 0 calc(20% - 8px) !important; 
-    width: 20% !important;     
-    min-width: 0 !important;
-    aspect-ratio: 16 / 9 !important;
-    height: auto !important;
-    border-radius: 15px !important;
-    overflow: hidden !important;
-    cursor: pointer !important;
-    position: relative !important;
-    background-color: #2a2a2a !important;
-    transition: transform 0.3s cubic-bezier(0.25, 1, 0.25, 1), box-shadow 0.3s ease !important;
+  flex: 0 0 calc(20% - 8px) !important;
+  width: 20% !important;
+  min-width: 0 !important;
+  aspect-ratio: 16 / 9 !important;
+  height: auto !important;
+  border-radius: 15px !important;
+  overflow: hidden !important;
+  cursor: pointer !important;
+  position: relative !important;
+  background-color: #2a2a2a !important;
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.25, 1),
+    box-shadow 0.3s ease !important;
 }
 
 #c01 .nx-carousel-card-item img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
 }
 
 #c01 .nx-carousel-card-item:hover {
-    transform: scale(1.5) !important;
-    z-index: 99 !important;
-    border-radius: 5px !important;
+  transform: scale(1.5) !important;
+  z-index: 99 !important;
+  border-radius: 5px !important;
 }
 
 /* ==========================================
@@ -788,104 +776,107 @@ NETFLIX ARROW CONTROLS WITH SMOOTH GRADIENT TRANSITIONS
 ========================================== */
 
 #c01 .nx-carousel-arrow-btn {
-    position: absolute !important;
-    top: 50% !important;
-    transform: translateY(-50%) !important;
-    background-color: transparent !important; /* Fully clear base */
-    color: #ffffff !important;
-    border: none !important;
-    font-size: 1.5rem;
-    width: 4%; 
-    cursor: pointer !important;
-    z-index: 100 !important; 
-    height: calc(61%) !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    padding: 30px;
-    overflow: hidden; /* Keeps the internal animation layer completely contained */
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  background-color: transparent !important; /* Fully clear base */
+  color: #ffffff !important;
+  border: none !important;
+  font-size: 1.5rem;
+  width: 4%;
+  cursor: pointer !important;
+  z-index: 100 !important;
+  height: calc(61%) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 30px;
+  overflow: hidden; /* Keeps the internal animation layer completely contained */
 }
 
 /* 💡 THE CURE: Create an invisible placeholder background layer inside the buttons */
 .nx-carousel-arrow-btn::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0; /* Hidden by default */
-    z-index: -1; /* Sits cleanly behind the white arrow symbol icon */
-    
-    /* 💡 Transitioning the opacity property guarantees a perfectly smooth fade ease curve */
-    transition: opacity 0.4s ease-in-out !important; 
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0; /* Hidden by default */
+  z-index: -1; /* Sits cleanly behind the white arrow symbol icon */
+
+  /* 💡 Transitioning the opacity property guarantees a perfectly smooth fade ease curve */
+  transition: opacity 0.4s ease-in-out !important;
 }
 
 /* Fade in the background layer whenever the cursor hovers on the button parent */
 .nx-carousel-arrow-btn:hover::before {
-    opacity: 1; 
+  opacity: 1;
 }
 
 /* LEFT CONTROLLER PROPERTIES */
 .nx-carousel-arrow-btn.nx-btn-left {
-    padding-left: 4%;
-    left: 0 !important;
+  padding-left: 4%;
+  left: 0 !important;
 }
 
 .nx-carousel-arrow-btn.nx-btn-left::before {
-    background: linear-gradient(90deg, #000000df 60%, rgba(0,0,0,0) 100%) !important;
+  background: linear-gradient(
+    90deg,
+    #000000df 60%,
+    rgba(0, 0, 0, 0) 100%
+  ) !important;
 }
 
 /* RIGHT CONTROLLER PROPERTIES */
 .nx-carousel-arrow-btn.nx-btn-right {
-    padding-right: 4%;
-    right: 0 !important;
+  padding-right: 4%;
+  right: 0 !important;
 }
 
 .nx-carousel-arrow-btn.nx-btn-right::before {
-    background: linear-gradient(270deg, #000000df 60%, rgba(0,0,0,0) 100%) !important;
+  background: linear-gradient(
+    270deg,
+    #000000df 60%,
+    rgba(0, 0, 0, 0) 100%
+  ) !important;
 }
 
-
 /* Make both media elements take up 100% of the box frame coordinates */
-.nx-poster-thumb, 
+.nx-poster-thumb,
 .nx-video-preview {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    display: block !important;
-    transition: opacity 0.4s ease-in-out !important; /* Smooth fade effect */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+  transition: opacity 0.4s ease-in-out !important; /* Smooth fade effect */
 }
 
 /* Image starts fully visible */
 .nx-poster-thumb {
-    opacity: 1;
-    z-index: 2;
+  opacity: 1;
+  z-index: 2;
 }
 
 /* Video starts completely hidden behind the image */
 .nx-video-preview {
-    opacity: 0;
-    z-index: 1;
+  opacity: 0;
+  z-index: 1;
 }
 
 /* 💡 INTERACTIVE ACTIVE HOVER UTILITY STATES */
 /* When the active class is injected, fade out the image and fade in the playing video */
 .nx-carousel-card-item.is-playing .nx-poster-thumb {
-    opacity: 0;
+  opacity: 0;
 }
 
 .nx-carousel-card-item.is-playing .nx-video-preview {
-    opacity: 1;
-    z-index: 3; /* Brings the video layer cleanly to the top position */
+  opacity: 1;
+  z-index: 3; /* Brings the video layer cleanly to the top position */
 }
-
-
-
-
 
 /* Ensure the image container works as a stable parent anchor */
 .hero-img {
@@ -956,8 +947,7 @@ NETFLIX ARROW CONTROLS WITH SMOOTH GRADIENT TRANSITIONS
   LOVEFLIX PREMIUM MODAL DIALOG DESIGN
   ========================================== */
 
-
-  .loveflix-dialog {
+.loveflix-dialog {
   border: none !important;
   background: transparent !important;
   padding: 0 !important;
@@ -968,344 +958,352 @@ NETFLIX ARROW CONTROLS WITH SMOOTH GRADIENT TRANSITIONS
   position: fixed !important; /* Locks layout relative to viewport bounds rather than parent divs */
   top: 60% !important;
   left: 50% !important;
-  transform: translate(-50%, -50%) !important; /* Moves element backward by its exact center coordinates */
+  transform: translate(
+    -50%,
+    -50%
+  ) !important; /* Moves element backward by its exact center coordinates */
   margin: 0 !important; /* Strips away standard browser layout margins */
 }
-  
-  .loveflix-dialog::backdrop {
-    backdrop-filter: blur(12px) !important;
-    background-color: rgba(0, 0, 0, 0.75) !important;
-  }
-  
-  .dialog-card {
-    background: #181818;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    padding: 30px;
-    color: #ffffff;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
-  }
-  
-  .dialog-title {
-    font-size: 1.6rem;
-    font-weight: 700;
-    margin-bottom: 8px;
-    color: #ffffff;
-  }
-  
-  .dialog-subtitle {
-    font-size: 0.9rem;
-    color: #b3b3b3;
-    margin-bottom: 20px;
-  }
-  
-  /* CUSTOM DROPDOWN COMPONENT */
-  .custom-select-wrapper {
-    position: relative;
-    width: 100%;
-    margin-bottom: 30px;
-  }
-  
-  .select-trigger-box {
-    background-color: #2a2a2a;
-    padding: 12px 20px;
-    border-radius: 6px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    cursor: pointer;
-    border: 1px solid transparent;
-    transition: all 0.2s ease;
-    font-size: 0.95rem;
-  }
-  
-  .select-trigger-box:hover {
-    background-color: #333333;
-    border-color: rgba(255,255,255,0.2);
-  }
-  
-  .custom-select-wrapper.is-open .select-trigger-box {
-    border-color: #db0000;
-  }
-  
-  .arrow-icon {
-    font-size: 1.2rem;
-    transition: transform 0.2s ease;
-  }
-  
-  .custom-select-wrapper.is-open .arrow-icon {
-    transform: rotate(180deg);
-  }
-  
-  /* THE OPTIONS CONTAINER BOX */
-  .custom-options-list {
-    position: absolute;
-    top: calc(100% + 5px);
-    left: 0;
-    width: 100%;
-    background-color: #242424;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 6px;
-    list-style: none !important;
-    padding: 6px 0 !important;
-    margin: 0 !important;
-    z-index: 999;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-10px);
-    transition: all 0.2s cubic-bezier(0.25, 1, 0.5, 1);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-  }
-  
-  .custom-select-wrapper.is-open .custom-options-list {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
-  
-  /* 💡 HIGHLY CUSTOMIZABLE HOVER COMPONENT: No more browser grey! */
-  .option-item {
-    padding: 12px 20px;
-    font-size: 0.95rem;
-    color: #cccccc;
-    cursor: pointer;
-    transition: all 0.2s ease;
-  }
-  
-  .option-item:hover {
-    color: #ffffff;
-    background-color: #3d3d3d !important; 
-  }
-  
-  /* MODAL CONTROL ACTION BUTTONS ROW */
-  .dialog-action-row {
-    display: flex;
-    justify-content: flex-end;
-    gap: 12px;
-  }
-  
-  .modal-btn {
-    padding: 10px 24px;
-    border-radius: 50px;
-    font-weight: 600;
-    font-size: 0.9rem;
-    border: none;
-    cursor: pointer;
-    transition: all 0.2s ease;
-  }
-  
-  .btn-cancel {
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #ffffff;
-  }
-  
-  .btn-cancel:hover { background-color: rgba(255, 255, 255, 0.15); }
-  
-  .btn-confirm {
-    background-color: #ff0000;
-    color: #ffffff;
-  }
-  
-  .btn-confirm:hover {
-    color: #ff0000;
-    background-color: #ffffff;
-  }
-  
 
-  /* Locks the body framework from running scroll sequences */
+.loveflix-dialog::backdrop {
+  backdrop-filter: blur(12px) !important;
+  background-color: rgba(0, 0, 0, 0.75) !important;
+}
+
+.dialog-card {
+  background: #181818;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 30px;
+  color: #ffffff;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.dialog-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+.dialog-subtitle {
+  font-size: 0.9rem;
+  color: #b3b3b3;
+  margin-bottom: 20px;
+}
+
+/* CUSTOM DROPDOWN COMPONENT */
+.custom-select-wrapper {
+  position: relative;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.select-trigger-box {
+  background-color: #2a2a2a;
+  padding: 12px 20px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+  font-size: 0.95rem;
+}
+
+.select-trigger-box:hover {
+  background-color: #333333;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.custom-select-wrapper.is-open .select-trigger-box {
+  border-color: #db0000;
+}
+
+.arrow-icon {
+  font-size: 1.2rem;
+  transition: transform 0.2s ease;
+}
+
+.custom-select-wrapper.is-open .arrow-icon {
+  transform: rotate(180deg);
+}
+
+/* THE OPTIONS CONTAINER BOX */
+.custom-options-list {
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  width: 100%;
+  background-color: #242424;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  list-style: none !important;
+  padding: 6px 0 !important;
+  margin: 0 !important;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.2s cubic-bezier(0.25, 1, 0.5, 1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.custom-select-wrapper.is-open .custom-options-list {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* 💡 HIGHLY CUSTOMIZABLE HOVER COMPONENT: No more browser grey! */
+.option-item {
+  padding: 12px 20px;
+  font-size: 0.95rem;
+  color: #cccccc;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.option-item:hover {
+  color: #ffffff;
+  background-color: #3d3d3d !important;
+}
+
+/* MODAL CONTROL ACTION BUTTONS ROW */
+.dialog-action-row {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.modal-btn {
+  padding: 10px 24px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-cancel {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.btn-cancel:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.btn-confirm {
+  background-color: #ff0000;
+  color: #ffffff;
+}
+
+.btn-confirm:hover {
+  color: #ff0000;
+  background-color: #ffffff;
+}
+
+/* Locks the body framework from running scroll sequences */
 body.modal-open-lock {
   overflow: hidden !important;
   height: 100vh !important;
 }
-
-
 
 /* ==========================================
   NETFLIX BLEEDING & FADING CAROUSEL CORE
   ========================================== */
 
 .nx-carousel-section {
-    padding: 50px 0; /* 💡 CHANGED: Remove side padding so track can touch screen edges */
-    background-color: #141414;
-    position: relative;
-    box-sizing: border-box;
-    overflow: hidden; /* Keeps scrollbars invisible */
-  }
-  
-  .nx-carousel-heading {
-      color: #e5e5e5;
-      font-size: 1.4rem;
-      margin-left: 4%; /* 💡 ADDED: Keeps the text title aligned with normal page text */
-      margin-bottom: 12px;
-      font-weight: 700;
-      position: absolute;
-  }
-  
-  .nx-carousel-base-wrapper {
-      position: relative;
-      display: flex !important;
-      align-items: center;
-      width: 100% !important;
-      
-      /* 💡 THE FADE EFFECT MAGIC: Applies a transparency gradient mask across the edges */
-      /* This makes the items naturally appear dim/lower opacity as they touch the left and right window borders */
-      -webkit-mask-image: linear-gradient(to right, 
-          transparent 0%, 
-          #000 4%, 
-          #000 96%, 
-          transparent 100%
-      );
-      mask-image: linear-gradient(to right, 
-          transparent 0%, 
-          #000 4%, 
-          #000 96%, 
-          transparent 100%
-      );
-  }
-  
-  .nx-carousel-clip-viewport {
-      width: 100% !important;
-      overflow: hidden!important; /* 💡 CHANGED: Allows items to bleed past parent container barriers */
-      padding: 50px 0 !important;
-      display: block !important;
-  }
-  
-  .nx-carousel-moving-track {
-      display: flex !important;
-      gap: 10px !important;
-      width: 100% !important;
-      /* 💡 START ALIGNMENT: Margins align the track elements with the heading text layout line */
-      padding-left: 4% !important; 
-      padding-right: 4% !important;
-      transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1) !important;
-  }
+  padding: 50px 0; /* 💡 CHANGED: Remove side padding so track can touch screen edges */
+  background-color: #141414;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden; /* Keeps scrollbars invisible */
+}
+
+.nx-carousel-heading {
+  color: #e5e5e5;
+  font-size: 1.4rem;
+  margin-left: 4%; /* 💡 ADDED: Keeps the text title aligned with normal page text */
+  margin-bottom: 12px;
+  font-weight: 700;
+  position: absolute;
+}
+
+.nx-carousel-base-wrapper {
+  position: relative;
+  display: flex !important;
+  align-items: center;
+  width: 100% !important;
+
+  /* 💡 THE FADE EFFECT MAGIC: Applies a transparency gradient mask across the edges */
+  /* This makes the items naturally appear dim/lower opacity as they touch the left and right window borders */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 4%,
+    #000 96%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 4%,
+    #000 96%,
+    transparent 100%
+  );
+}
+
+.nx-carousel-clip-viewport {
+  width: 100% !important;
+  overflow: hidden !important; /* 💡 CHANGED: Allows items to bleed past parent container barriers */
+  padding: 50px 0 !important;
+  display: block !important;
+}
+
+.nx-carousel-moving-track {
+  display: flex !important;
+  gap: 10px !important;
+  width: 100% !important;
+  /* 💡 START ALIGNMENT: Margins align the track elements with the heading text layout line */
+  padding-left: 4% !important;
+  padding-right: 4% !important;
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
 
 #c02 .nx-carousel-card-item {
-  flex: 0 0 calc(20% - 8px) !important;     
+  flex: 0 0 calc(20% - 8px) !important;
   aspect-ratio: 11 / 9 !important;
   border-radius: 15px !important;
   overflow: visible !important;
   cursor: pointer !important;
   position: relative !important;
-  transition: transform 0.3s cubic-bezier(0.25, 1, 0.25, 1), box-shadow 0.3s ease !important;
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.25, 1),
+    box-shadow 0.3s ease !important;
   display: flex;
 }
 
-  
+#c02 .num-img {
+  margin-left: 30%;
+  width: 50% !important;
+  aspect-ratio: 2 / 3 !important;
+  border-radius: 15px !important;
+  overflow: hidden !important;
+  position: absolute !important;
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.25, 1),
+    box-shadow 0.3s ease !important;
+  box-shadow: -30px 0px 40px #151515 !important;
+}
 
-  #c02 .num-img {
-    margin-left: 30%;
-    width: 50% !important;     
-    aspect-ratio: 2 / 3 !important;
-    border-radius: 15px !important;
-    overflow: hidden !important;
-    position: absolute !important;
-    transition: transform 0.3s cubic-bezier(0.25, 1, 0.25, 1), box-shadow 0.3s ease !important;
-    box-shadow: -30px 0px 40px #151515 !important;
-  }
+#c02 .num-img img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+}
 
-  #c02 .num-img img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    display: block !important;
-  }
-  
 #c02 .num-img:hover {
   margin-top: 20px;
   margin-left: 0;
-  width: 100% !important; 
-    aspect-ratio: 16 / 9 !important;
-    transform: scale(1.5) !important;
-    z-index: 99 !important;
-    border-radius: 5px !important; 
-    box-shadow: -30px 0px 40px #00000000 !important;
+  width: 100% !important;
+  aspect-ratio: 16 / 9 !important;
+  transform: scale(1.5) !important;
+  z-index: 99 !important;
+  border-radius: 5px !important;
+  box-shadow: -30px 0px 40px #00000000 !important;
 }
 
 .num {
   -webkit-text-stroke: 2px #b3b3b3;
   color: #00000000;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 242px;
   line-height: 0.83 !important;
 }
-  
 
-  /* ==========================================
+/* ==========================================
   NETFLIX ARROW CONTROLS WITH SMOOTH GRADIENT TRANSITIONS
   ========================================== */
-  
-#c02  .nx-carousel-arrow-btn {
-      position: absolute !important;
-      height: 65% !important;
-      top: 47% !important;
-      transform: translateY(-50%) !important;
-      background-color: transparent !important; /* Fully clear base */
-      color: #ffffff !important;
-      border: none !important;
-      font-size: 1.5rem;
-      width: 4%; 
-      cursor: pointer !important;
-      z-index: 100 !important; 
-      display: flex !important;
-      align-items: center !important;
-      justify-content: center !important;
-      padding: 30px;
-      overflow: hidden; /* Keeps the internal animation layer completely contained */
-  }
-  
-  /* 💡 THE CURE: Create an invisible placeholder background layer inside the buttons */
-  .nx-carousel-arrow-btn::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 0; /* Hidden by default */
-      z-index: -1; /* Sits cleanly behind the white arrow symbol icon */
-      
-      /* 💡 Transitioning the opacity property guarantees a perfectly smooth fade ease curve */
-      transition: opacity 0.4s ease-in-out !important; 
-  }
-  
-  /* Fade in the background layer whenever the cursor hovers on the button parent */
-  .nx-carousel-arrow-btn:hover::before {
-      opacity: 1; 
-  }
-  
-  /* LEFT CONTROLLER PROPERTIES */
-  .nx-carousel-arrow-btn.nx-btn-left {
-      padding-left: 4%;
-      left: 0 !important;
-  }
-  
-  .nx-carousel-arrow-btn.nx-btn-left::before {
-      background: linear-gradient(90deg, #000000df 60%, rgba(0,0,0,0) 100%) !important;
-  }
-  
-  /* RIGHT CONTROLLER PROPERTIES */
-  .nx-carousel-arrow-btn.nx-btn-right {
-      padding-right: 4%;
-      right: 0 !important;
-  }
-  
-  .nx-carousel-arrow-btn.nx-btn-right::before {
-      background: linear-gradient(270deg, #000000df 60%, rgba(0,0,0,0) 100%) !important;
-  }
-  
-  
-  /* Make both media elements take up 100% of the box frame coordinates */
-  .nx-poster-thumb, 
-  .nx-video-preview {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100% !important;
-      height: 100% !important;
-      object-fit: cover !important;
-      display: block !important;
-      transition: opacity 0.4s ease-in-out !important; /* Smooth fade effect */
-  }
 
+#c02 .nx-carousel-arrow-btn {
+  position: absolute !important;
+  height: 65% !important;
+  top: 47% !important;
+  transform: translateY(-50%) !important;
+  background-color: transparent !important; /* Fully clear base */
+  color: #ffffff !important;
+  border: none !important;
+  font-size: 1.5rem;
+  width: 4%;
+  cursor: pointer !important;
+  z-index: 100 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 30px;
+  overflow: hidden; /* Keeps the internal animation layer completely contained */
+}
 
+/* 💡 THE CURE: Create an invisible placeholder background layer inside the buttons */
+.nx-carousel-arrow-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0; /* Hidden by default */
+  z-index: -1; /* Sits cleanly behind the white arrow symbol icon */
+
+  /* 💡 Transitioning the opacity property guarantees a perfectly smooth fade ease curve */
+  transition: opacity 0.4s ease-in-out !important;
+}
+
+/* Fade in the background layer whenever the cursor hovers on the button parent */
+.nx-carousel-arrow-btn:hover::before {
+  opacity: 1;
+}
+
+/* LEFT CONTROLLER PROPERTIES */
+.nx-carousel-arrow-btn.nx-btn-left {
+  padding-left: 4%;
+  left: 0 !important;
+}
+
+.nx-carousel-arrow-btn.nx-btn-left::before {
+  background: linear-gradient(
+    90deg,
+    #000000df 60%,
+    rgba(0, 0, 0, 0) 100%
+  ) !important;
+}
+
+/* RIGHT CONTROLLER PROPERTIES */
+.nx-carousel-arrow-btn.nx-btn-right {
+  padding-right: 4%;
+  right: 0 !important;
+}
+
+.nx-carousel-arrow-btn.nx-btn-right::before {
+  background: linear-gradient(
+    270deg,
+    #000000df 60%,
+    rgba(0, 0, 0, 0) 100%
+  ) !important;
+}
+
+/* Make both media elements take up 100% of the box frame coordinates */
+.nx-poster-thumb,
+.nx-video-preview {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+  transition: opacity 0.4s ease-in-out !important; /* Smooth fade effect */
+}

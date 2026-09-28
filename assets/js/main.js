@@ -2,235 +2,237 @@
 1. GLOBAL FRAMEWORK & JQUERY INITIALIZATIONS
    ============================================================= */
 (function ($) {
-    "use strict";
-  
-    // Toggle .header-scrolled class to #header when page is scrolled
-    $(window).scroll(function () {
-      if ($(this).scrollTop() > 50) {
-        $("#header").addClass("header-scrolled");
-      } else {
-        $("#header").removeClass("header-scrolled");
-      }
-    });
-  
-    // Mobile Navigation Menu Toggle Engine
-    if ($(".nav-menu").length) {
-      $(document).on("click", ".mobile-nav-toggle", function () {
-        $("body").toggleClass("mobile-nav-active");
-        $(".mobile-nav-toggle i").toggleClass("bx-x");
-      });
+  "use strict";
+
+  // Toggle .header-scrolled class to #header when page is scrolled
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 50) {
+      $("#header").addClass("header-scrolled");
+    } else {
+      $("#header").removeClass("header-scrolled");
     }
-  
-  })(jQuery);
-  
-  
-  
-  /* =============================================================
+  });
+
+  // Mobile Navigation Menu Toggle Engine
+  if ($(".nav-menu").length) {
+    $(document).on("click", ".mobile-nav-toggle", function () {
+      $("body").toggleClass("mobile-nav-active");
+      $(".mobile-nav-toggle i").toggleClass("bx-x");
+    });
+  }
+})(jQuery);
+
+/* =============================================================
 2. INDEPENDENT MULTI-ROW CAROUSEL MOVEMENT ENGINE
      ============================================================= */
-  // Stores and tracks separate current slide positions for each unique row section ID
-  let carouselPositions = {
-      'c1': 0, // Row 1 positional indicator tracking channel
-      'c2': 0,  // Row 2 positional indicator tracking channel
-      'c3': 0
-  };
-  
-  function moveNxCarousel(direction, trackId) {
-      const track = document.getElementById(trackId);
-      if (!track) return; 
-  
-      // Target ONLY the cards sliding inside this specific row container
-      const items = track.querySelectorAll('.nx-carousel-card-item'); 
-      if (items.length === 0) return;
-  
-      const totalItems = items.length;
-      
-      // Manage responsive display card column layout thresholds
-      let itemsVisible = 5;
-      if (window.innerWidth <= 992) itemsVisible = 3;
-      if (window.innerWidth <= 576) itemsVisible = 2;
-      
-      const maxIndex = totalItems - itemsVisible;
-  
-      // Increment position tracker strictly for the active key row parameter code
-      carouselPositions[trackId] += direction;
-  
-      // Viewport structural safety boundary checking
-      if (carouselPositions[trackId] < 0) {
-          carouselPositions[trackId] = 0;
-      } else if (carouselPositions[trackId] > maxIndex) {
-          carouselPositions[trackId] = maxIndex;
-      }
-  
-      // Measure the layout item width bounding parameters dynamically
-      const itemWidth = items[0].getBoundingClientRect().width;
-      
-      /* 💡 ALIGNMENT SYNC: Ensure this gap width matches your CSS track layout rule perfectly! */
-      const gapWidth = 15; 
-      
-      // Shift track container left smoothly
-      const shiftAmount = carouselPositions[trackId] * (itemWidth + gapWidth);
-      track.style.transform = `translateX(-${shiftAmount}px)`;
+// Stores and tracks separate current slide positions for each unique row section ID
+let carouselPositions = {
+  c1: 0, // Row 1 positional indicator tracking channel
+  c2: 0, // Row 2 positional indicator tracking channel
+  c3: 0,
+};
+
+function moveNxCarousel(direction, trackId) {
+  const track = document.getElementById(trackId);
+  if (!track) return;
+
+  // Target ONLY the cards sliding inside this specific row container
+  const items = track.querySelectorAll(".nx-carousel-card-item");
+  if (items.length === 0) return;
+
+  const totalItems = items.length;
+
+  // Manage responsive display card column layout thresholds
+  let itemsVisible = 5;
+  if (window.innerWidth <= 992) itemsVisible = 3;
+  if (window.innerWidth <= 576) itemsVisible = 2;
+
+  const maxIndex = totalItems - itemsVisible;
+
+  // Increment position tracker strictly for the active key row parameter code
+  carouselPositions[trackId] += direction;
+
+  // Viewport structural safety boundary checking
+  if (carouselPositions[trackId] < 0) {
+    carouselPositions[trackId] = 0;
+  } else if (carouselPositions[trackId] > maxIndex) {
+    carouselPositions[trackId] = maxIndex;
   }
-  
-  // Global window screen listener resets layout shifts cleanly if browser drops scale metrics
-  window.addEventListener('resize', () => {
-      carouselPositions = { 'c1': 0, 'c2': 0, 'c3': 0 };
-      document.querySelectorAll('.nx-carousel-moving-track').forEach(track => {
-          track.style.transform = 'translateX(0px)';
-      });
+
+  // Measure the layout item width bounding parameters dynamically
+  const itemWidth = items[0].getBoundingClientRect().width;
+
+  /* 💡 ALIGNMENT SYNC: Ensure this gap width matches your CSS track layout rule perfectly! */
+  const gapWidth = 15;
+
+  // Shift track container left smoothly
+  const shiftAmount = carouselPositions[trackId] * (itemWidth + gapWidth);
+  track.style.transform = `translateX(-${shiftAmount}px)`;
+}
+
+// Global window screen listener resets layout shifts cleanly if browser drops scale metrics
+window.addEventListener("resize", () => {
+  carouselPositions = { c1: 0, c2: 0, c3: 0 };
+  document.querySelectorAll(".nx-carousel-moving-track").forEach((track) => {
+    track.style.transform = "translateX(0px)";
   });
-  
-  
-  /* =============================================================
+});
+
+/* =============================================================
 3. CAROUSEL VIDEO COMPONENT HOVER SNIPPET HANDLERS
      ============================================================= */
-  function playPreview(cardElement) {
-    const video = cardElement.querySelector('.nx-video-preview');
-    
-    if (video) {
-        if (video.getAttribute('preload') === 'none') {
-            video.setAttribute('preload', 'auto');
-        }
-        
-        video.play()
-            .then(() => {
-                cardElement.classList.add('is-playing');
-            })
-            .catch(error => {
-                console.log("Browser auto-play safety blocked video start:", error);
-            });
+function playPreview(cardElement) {
+  const video = cardElement.querySelector(".nx-video-preview");
+
+  if (video) {
+    if (video.getAttribute("preload") === "none") {
+      video.setAttribute("preload", "auto");
     }
+
+    video
+      .play()
+      .then(() => {
+        cardElement.classList.add("is-playing");
+      })
+      .catch((error) => {
+        console.log("Browser auto-play safety blocked video start:", error);
+      });
   }
-  
-  function stopPreview(cardElement) {
-    const video = cardElement.querySelector('.nx-video-preview');
-    
-    if (video) {
-        cardElement.classList.remove('is-playing');
-        video.pause();
-        video.currentTime = 0;
-    }
+}
+
+function stopPreview(cardElement) {
+  const video = cardElement.querySelector(".nx-video-preview");
+
+  if (video) {
+    cardElement.classList.remove("is-playing");
+    video.pause();
+    video.currentTime = 0;
   }
-  
-  
-  /* =============================================================
+}
+
+/* =============================================================
 4. HERO BANNER CINEMA BACKGROUND HOVER STREAM LOGICS
      ============================================================= */
-  function playHeroPreview(containerElement) {
-    const heroVideo = containerElement.querySelector('.hero-media-video');
-    const parentContainer = containerElement.closest('.hero-img') || containerElement;
-    
-    if (heroVideo) {
-        if (heroVideo.getAttribute('preload') === 'none') {
-            heroVideo.setAttribute('preload', 'auto');
-        }
-        
-        heroVideo.play()
-            .then(() => {
-                parentContainer.classList.add('is-playing-video');
-            })
-            .catch(err => {
-                console.log("Hero auto playback halted by browser policy rules:", err);
-            });
+function playHeroPreview(containerElement) {
+  const heroVideo = containerElement.querySelector(".hero-media-video");
+  const parentContainer =
+    containerElement.closest(".hero-img") || containerElement;
+
+  if (heroVideo) {
+    if (heroVideo.getAttribute("preload") === "none") {
+      heroVideo.setAttribute("preload", "auto");
     }
+
+    heroVideo
+      .play()
+      .then(() => {
+        parentContainer.classList.add("is-playing-video");
+      })
+      .catch((err) => {
+        console.log("Hero auto playback halted by browser policy rules:", err);
+      });
   }
-  
-  function stopHeroPreview(containerElement) {
-    const heroVideo = containerElement.querySelector('.hero-media-video');
-    const parentContainer = containerElement.closest('.hero-img') || containerElement;
-    
-    if (heroVideo) {
-        parentContainer.classList.remove('is-playing-video');
-        heroVideo.pause();
-        heroVideo.currentTime = 0;
-    }
+}
+
+function stopHeroPreview(containerElement) {
+  const heroVideo = containerElement.querySelector(".hero-media-video");
+  const parentContainer =
+    containerElement.closest(".hero-img") || containerElement;
+
+  if (heroVideo) {
+    parentContainer.classList.remove("is-playing-video");
+    heroVideo.pause();
+    heroVideo.currentTime = 0;
   }
-  
-  
-  /* =============================================================
+}
+
+/* =============================================================
   5. LOVEFLIX MODAL ACCESS GATEKEEPER DIALOG SYSTEM
      ============================================================= */
-  const playButton = document.getElementById("heroPlayBtn");
-  const favDialog = document.getElementById("favDialog");
-  const dropdownTrigger = document.getElementById("dropdownTrigger");
-  const optionsTray = document.getElementById("optionsTray");
-  const selectedOptionText = document.getElementById("selectedOptionText");
-  const secureSelectValue = document.getElementById("secureSelectValue");
-  const optionItems = document.querySelectorAll(".option-item");
-  const cancelBtn = document.getElementById("cancelBtn");
-  const confirmBtn = document.getElementById("confirmBtn");
-  
-  let isPlayButtonUnlocked = false;
-  
-  // 1. Toggle custom dropdown list layer expansions
-  if (dropdownTrigger) {
-    dropdownTrigger.addEventListener("click", (e) => {
-      e.stopPropagation();
-      dropdownTrigger.parentElement.classList.toggle("is-open");
-    });
-  }
-  
-  // 2. Map selection parameters downward when item elements are clicked
-  optionItems.forEach(item => {
-    item.addEventListener("click", function() {
-      const value = this.getAttribute("data-value");
-      const text = this.textContent;
-  
-      if (selectedOptionText) selectedOptionText.textContent = text;
-      if (secureSelectValue) secureSelectValue.value = value;
-  
-      if (dropdownTrigger) dropdownTrigger.parentElement.classList.remove("is-open");
-    });
+const playButton = document.getElementById("heroPlayBtn");
+const favDialog = document.getElementById("favDialog");
+const dropdownTrigger = document.getElementById("dropdownTrigger");
+const optionsTray = document.getElementById("optionsTray");
+const selectedOptionText = document.getElementById("selectedOptionText");
+const secureSelectValue = document.getElementById("secureSelectValue");
+const optionItems = document.querySelectorAll(".option-item");
+const cancelBtn = document.getElementById("cancelBtn");
+const confirmBtn = document.getElementById("confirmBtn");
+
+let isPlayButtonUnlocked = false;
+
+// 1. Toggle custom dropdown list layer expansions
+if (dropdownTrigger) {
+  dropdownTrigger.addEventListener("click", (e) => {
+    e.stopPropagation();
+    dropdownTrigger.parentElement.classList.toggle("is-open");
   });
-  
-  // Close shelf safely if an outer click escape happens
-  document.addEventListener("click", () => {
-    if (dropdownTrigger) dropdownTrigger.parentElement.classList.remove("is-open");
+}
+
+// 2. Map selection parameters downward when item elements are clicked
+optionItems.forEach((item) => {
+  item.addEventListener("click", function () {
+    const value = this.getAttribute("data-value");
+    const text = this.textContent;
+
+    if (selectedOptionText) selectedOptionText.textContent = text;
+    if (secureSelectValue) secureSelectValue.value = value;
+
+    if (dropdownTrigger)
+      dropdownTrigger.parentElement.classList.remove("is-open");
   });
-  
-  // 3. Intercept Play button interactions to prompt validation checks
-  if (playButton) {
-    playButton.addEventListener("click", (event) => {
-      if (!isPlayButtonUnlocked) {
-        event.preventDefault(); 
-        
-        if (selectedOptionText) selectedOptionText.textContent = "Payemnt mode...";
-        if (secureSelectValue) secureSelectValue.value = "default";
-        
-        document.body.classList.add("modal-open-lock");
-        if (favDialog) favDialog.showModal();
-      }
-    });
-  }
-  
-  // 4. Modal submit confirm validation sequences
-  if (confirmBtn) {
-    confirmBtn.addEventListener("click", () => {
-      const finalChosenValue = secureSelectValue ? secureSelectValue.value : "default";
-    
-      document.body.classList.remove("modal-open-lock");
-    
-      if (finalChosenValue === "unlock_key") {
-        isPlayButtonUnlocked = true;
-        if (playButton) {
-          playButton.href = "/unlocked-movie.html";
-          if (favDialog) favDialog.close();
-          playButton.click(); 
-        }
-      } else {
-        isPlayButtonUnlocked = false;
-        if (playButton) playButton.href = "/renew.html";
+});
+
+// Close shelf safely if an outer click escape happens
+document.addEventListener("click", () => {
+  if (dropdownTrigger)
+    dropdownTrigger.parentElement.classList.remove("is-open");
+});
+
+// 3. Intercept Play button interactions to prompt validation checks
+if (playButton) {
+  playButton.addEventListener("click", (event) => {
+    if (!isPlayButtonUnlocked) {
+      event.preventDefault();
+
+      if (selectedOptionText)
+        selectedOptionText.textContent = "Payemnt mode...";
+      if (secureSelectValue) secureSelectValue.value = "default";
+
+      document.body.classList.add("modal-open-lock");
+      if (favDialog) favDialog.showModal();
+    }
+  });
+}
+
+// 4. Modal submit confirm validation sequences
+if (confirmBtn) {
+  confirmBtn.addEventListener("click", () => {
+    const finalChosenValue = secureSelectValue
+      ? secureSelectValue.value
+      : "default";
+
+    document.body.classList.remove("modal-open-lock");
+
+    if (finalChosenValue === "unlock_key") {
+      isPlayButtonUnlocked = true;
+      if (playButton) {
+        playButton.href = "/unlocked-movie.html";
         if (favDialog) favDialog.close();
+        playButton.click();
       }
-    });
-  }
-  
-  // 5. Cancel close event handlers
-  if (cancelBtn) {
-    cancelBtn.addEventListener("click", () => {
-      document.body.classList.remove("modal-open-lock");
+    } else {
+      isPlayButtonUnlocked = false;
+      if (playButton) playButton.href = "/renew.html";
       if (favDialog) favDialog.close();
-    });
-  }
-  
+    }
+  });
+}
+
+// 5. Cancel close event handlers
+if (cancelBtn) {
+  cancelBtn.addEventListener("click", () => {
+    document.body.classList.remove("modal-open-lock");
+    if (favDialog) favDialog.close();
+  });
+}
