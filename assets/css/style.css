@@ -960,15 +960,24 @@ NETFLIX ARROW CONTROLS WITH SMOOTH GRADIENT TRANSITIONS
 }
 
 /* ==========================================
-   LOVEFLIX PREMIUM MODAL DIALOG DESIGN
-   ========================================== */
-   .loveflix-dialog {
-    border: none !important;
-    background: transparent !important;
-    padding: 0 !important;
-    max-width: 420px;
-    width: 90%;
-  }
+  LOVEFLIX PREMIUM MODAL DIALOG DESIGN
+  ========================================== */
+
+
+  .loveflix-dialog {
+  border: none !important;
+  background: transparent !important;
+  padding: 0 !important;
+  max-width: 420px;
+  width: 90%;
+  height: 500px;
+
+  position: fixed !important; /* Locks layout relative to viewport bounds rather than parent divs */
+  top: 60% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important; /* Moves element backward by its exact center coordinates */
+  margin: 0 !important; /* Strips away standard browser layout margins */
+}
   
   .loveflix-dialog::backdrop {
     backdrop-filter: blur(12px) !important;
@@ -1108,3 +1117,9 @@ NETFLIX ARROW CONTROLS WITH SMOOTH GRADIENT TRANSITIONS
   
   .btn-confirm:hover { background-color: rgba(255, 255, 255, 0.85); }
   
+
+  /* Locks the body framework from running scroll sequences */
+body.modal-open-lock {
+  overflow: hidden !important;
+  height: 100vh !important;
+}

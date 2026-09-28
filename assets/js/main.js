@@ -159,7 +159,7 @@ document.addEventListener("click", () => {
   dropdownTrigger.parentElement.classList.remove("is-open");
 });
 
-// 3. CAPTURE HERO BUTTON INTERACTION EVENTS
+// Locate your current playButton click listener logic block and update it:
 playButton.addEventListener("click", (event) => {
   if (!isPlayButtonUnlocked) {
     event.preventDefault(); 
@@ -168,21 +168,25 @@ playButton.addEventListener("click", (event) => {
     selectedOptionText.textContent = "Choose...";
     secureSelectValue.value = "default";
     
+    // 💡 FREEZE ON OPEN: Injects the layout locking tag onto your document body
+    document.body.classList.add("modal-open-lock");
+    
     favDialog.showModal();
   }
 });
 
-// 4. ACTION SUBMIT HANDLERS
+// Update BOTH your confirmBtn and cancelBtn listeners to clear the lock when closed:
 confirmBtn.addEventListener("click", () => {
   const finalChosenValue = secureSelectValue.value;
 
-  // Verify chosen clearance token match keys
+  // 💡 RELEASE LOCK: Unlocks scroll functionalities instantly
+  document.body.classList.remove("modal-open-lock");
+
   if (finalChosenValue === "unlock_key") {
     isPlayButtonUnlocked = true;
-    playButton.href = "/unlocked-movie.html"; // Target route coordinates
-    
+    playButton.href = "/unlocked-movie.html";
     favDialog.close();
-    playButton.click(); // Automate navigation dispatch loop
+    playButton.click(); 
   } else {
     isPlayButtonUnlocked = false;
     playButton.href = "/renew.html";
@@ -191,5 +195,7 @@ confirmBtn.addEventListener("click", () => {
 });
 
 cancelBtn.addEventListener("click", () => {
+  // 💡 RELEASE LOCK: Unlocks scroll functionalities on cancel close events
+  document.body.classList.remove("modal-open-lock");
   favDialog.close();
 });
