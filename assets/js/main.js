@@ -120,56 +120,76 @@ function playHeroPreview(containerElement) {
 
 
 
-
-// Grab DOM elements
+// DOM Element Targets
 const playButton = document.getElementById("heroPlayBtn");
 const favDialog = document.getElementById("favDialog");
-const selectEl = favDialog.querySelector("select");
+const dropdownTrigger = document.getElementById("dropdownTrigger");
+const optionsTray = document.getElementById("optionsTray");
+const selectedOptionText = document.getElementById("selectedOptionText");
+const secureSelectValue = document.getElementById("secureSelectValue");
+const optionItems = document.querySelectorAll(".option-item");
+const cancelBtn = document.getElementById("cancelBtn");
 const confirmBtn = document.getElementById("confirmBtn");
 
-// 💡 FLAG TRACKER: Keeps track of whether the button is locked or unlocked
 let isPlayButtonUnlocked = false;
 
-// INTERCEPT BUTTON EVENT CLICK LOOP
+// 1. TOGGLE DROPDOWN OPEN/CLOSE OVERLAYS
+dropdownTrigger.addEventListener("click", (e) => {
+  e.stopPropagation();
+  dropdownTrigger.parentElement.classList.toggle("is-open");
+});
+
+// 2. MONITOR OPTION ITEM CLICKS
+optionItems.forEach(item => {
+  item.addEventListener("click", function() {
+    const value = this.getAttribute("data-value");
+    const text = this.textContent;
+
+    // Update text labels and hidden script input references
+    selectedOptionText.textContent = text;
+    secureSelectValue.value = value;
+
+    // Shut options shelf view tray
+    dropdownTrigger.parentElement.classList.remove("is-open");
+  });
+});
+
+// Close custom tray safely if click falls outside menu borders
+document.addEventListener("click", () => {
+  dropdownTrigger.parentElement.classList.remove("is-open");
+});
+
+// 3. CAPTURE HERO BUTTON INTERACTION EVENTS
 playButton.addEventListener("click", (event) => {
-  // If the button is currently locked, STOP it from taking the user to /renew.html
   if (!isPlayButtonUnlocked) {
     event.preventDefault(); 
     
-    // Launch the HTML5 modal view box smoothly
+    // Clear out residual text states on fresh window displays
+    selectedOptionText.textContent = "Choose...";
+    secureSelectValue.value = "default";
+    
     favDialog.showModal();
   }
-  // If it IS unlocked (isPlayButtonUnlocked === true), the browser safely continues 
-  // following the normal link action, taking them to the updated custom page path!
 });
 
-// MONITOR DIALOG CLOSING SELECTION PHASES
-favDialog.addEventListener("close", () => {
-  const chosenValue = favDialog.returnValue;
-  
-  // 💡 CONDITION STEP: Check if the user chose the exact secret option value
-  if (chosenValue === "unlock_key") {
-    
-    // 1. Flip flag to true so next click goes through natively
+// 4. ACTION SUBMIT HANDLERS
+confirmBtn.addEventListener("click", () => {
+  const finalChosenValue = secureSelectValue.value;
+
+  // Verify chosen clearance token match keys
+  if (finalChosenValue === "unlock_key") {
     isPlayButtonUnlocked = true;
+    playButton.href = "/unlocked-movie.html"; // Target route coordinates
     
-    // 2. Change the button path link dynamically on the page!
-    playButton.href = "/unlocked-movie.html"; // 👈 Set your new target webpage path here!
-    
-    // 3. Optional: Instantly simulate a click so the user goes there right after confirming!
-    playButton.click();
-    
+    favDialog.close();
+    playButton.click(); // Automate navigation dispatch loop
   } else {
-    // If they chose anything else or canceled, reset paths back to safety defaults
     isPlayButtonUnlocked = false;
     playButton.href = "/renew.html";
+    favDialog.close();
   }
 });
 
-// MANAGE CONFIRM DIALOG LOGIC
-confirmBtn.addEventListener("click", (event) => {
-  event.preventDefault(); // Prevents fake layout form submission cycles
-  
-  // Close the popup window frame and forward the chosen selection string value downstream
-  favDialog.close(selectEl.value); 
+cancelBtn.addEventListener("click", () => {
+  favDialog.close();
 });

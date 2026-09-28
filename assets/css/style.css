@@ -958,3 +958,153 @@ NETFLIX ARROW CONTROLS WITH SMOOTH GRADIENT TRANSITIONS
   z-index: 10;
   pointer-events: none;
 }
+
+/* ==========================================
+   LOVEFLIX PREMIUM MODAL DIALOG DESIGN
+   ========================================== */
+   .loveflix-dialog {
+    border: none !important;
+    background: transparent !important;
+    padding: 0 !important;
+    max-width: 420px;
+    width: 90%;
+  }
+  
+  .loveflix-dialog::backdrop {
+    backdrop-filter: blur(12px) !important;
+    background-color: rgba(0, 0, 0, 0.75) !important;
+  }
+  
+  .dialog-card {
+    background: #181818;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 30px;
+    color: #ffffff;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+  }
+  
+  .dialog-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #ffffff;
+  }
+  
+  .dialog-subtitle {
+    font-size: 0.9rem;
+    color: #b3b3b3;
+    margin-bottom: 20px;
+  }
+  
+  /* CUSTOM DROPDOWN COMPONENT */
+  .custom-select-wrapper {
+    position: relative;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  
+  .select-trigger-box {
+    background-color: #2a2a2a;
+    padding: 12px 20px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+    font-size: 0.95rem;
+  }
+  
+  .select-trigger-box:hover {
+    background-color: #333333;
+    border-color: rgba(255,255,255,0.2);
+  }
+  
+  .custom-select-wrapper.is-open .select-trigger-box {
+    border-color: #00c5db;
+  }
+  
+  .arrow-icon {
+    font-size: 1.2rem;
+    transition: transform 0.2s ease;
+  }
+  
+  .custom-select-wrapper.is-open .arrow-icon {
+    transform: rotate(180deg);
+  }
+  
+  /* THE OPTIONS CONTAINER BOX */
+  .custom-options-list {
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+    width: 100%;
+    background-color: #242424;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    list-style: none !important;
+    padding: 6px 0 !important;
+    margin: 0 !important;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.2s cubic-bezier(0.25, 1, 0.5, 1);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  }
+  
+  .custom-select-wrapper.is-open .custom-options-list {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  
+  /* 💡 HIGHLY CUSTOMIZABLE HOVER COMPONENT: No more browser grey! */
+  .option-item {
+    padding: 12px 20px;
+    font-size: 0.95rem;
+    color: #cccccc;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .option-item:hover {
+    /* Customize your exact hover color effects below! */
+    background-color: #00c5db !important; /* Changes the highlighted zone to Cyan */
+    color: #000000 !important;            /* Turns text crisp black on highlight focus */
+    font-weight: 600;
+  }
+  
+  /* MODAL CONTROL ACTION BUTTONS ROW */
+  .dialog-action-row {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+  }
+  
+  .modal-btn {
+    padding: 10px 24px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .btn-cancel {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+  }
+  
+  .btn-cancel:hover { background-color: rgba(255, 255, 255, 0.15); }
+  
+  .btn-confirm {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
+  .btn-confirm:hover { background-color: rgba(255, 255, 255, 0.85); }
+  

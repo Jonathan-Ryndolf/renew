@@ -103,27 +103,38 @@
     </div>
   </section>
 <!-- ==========================================
-    NATIVE DIALOG MODAL BOX STRUCTURE
-    ========================================== -->
-<dialog id="favDialog">
-  <form>
-    <p>
-      <label style="color: #000;"> <!-- Added inline color color fix for reading against light backgrounds temporarily -->
-        Favorite animal:
-        <select>
-          <option value="default">Choose…</option>
-          <option value="brine">Brine shrimp</option>
-          <option value="unlock_key">Red panda</option> <!-- 💡 THE UNLOCK CHOICE -->
-          <option value="monkey">Spider monkey</option>
-        </select>
-      </label>
-    </p>
-    <div>
-      <button value="cancel" formmethod="dialog">Cancel</button>
-      <button id="confirmBtn" value="default">Confirm</button>
-    </div>
-  </form>
-</dialog>
+     CUSTOM LOVEFLIX STREAM DESIGN MODAL
+     ========================================== -->
+     <dialog id="favDialog" class="loveflix-dialog">
+      <div class="dialog-card">
+        <h3 class="dialog-title">Unlock Content</h3>
+        <p class="dialog-subtitle">Choose an option to verify your profile clearance:</p>
+    
+        <!-- 💡 THE CUSTOM CUSTOM DROPDOWN FRAMEWORK -->
+        <div class="custom-select-wrapper">
+          <div class="select-trigger-box" id="dropdownTrigger">
+            <span id="selectedOptionText">Choose...</span>
+            <i class="bx bx-chevron-down arrow-icon"></i>
+          </div>
+          
+          <!-- The Interactive Options Tray Container -->
+          <ul class="custom-options-list" id="optionsTray">
+            <li class="option-item" data-value="brine">Brine shrimp</li>
+            <li class="option-item secret-key" data-value="unlock_key">Red panda</li> <!-- 💡 THE UNLOCK OPTION -->
+            <li class="option-item" data-value="monkey">Spider monkey</li>
+          </ul>
+        </div>
+    
+        <!-- Hidden native input to securely hold your JavaScript logic values -->
+        <input type="hidden" id="secureSelectValue" value="default">
+    
+        <div class="dialog-action-row">
+          <button id="cancelBtn" class="modal-btn btn-cancel">Cancel</button>
+          <button id="confirmBtn" class="modal-btn btn-confirm">Confirm</button>
+        </div>
+      </div>
+    </dialog>
+    
   <!-- End Hero -->
 
   <main id="main">
