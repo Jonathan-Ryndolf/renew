@@ -10,17 +10,6 @@
 # General
 --------------------------------------------------------------*/
 
-/* ::-webkit-scrollbar {
-  width: 5px;
-}
-::-webkit-scrollbar-track {
-  background-color: #000000;
-}
-::-webkit-scrollbar-thumb {
-  background-color: #00c5db;
-  border-radius: 10px;
-} */
-
 ::selection {
   background: #ff5a5a44; /* WebKit/Blink Browsers */
 }
@@ -49,54 +38,6 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# colorcodes
---------------------------------------------------------------*/
-
-#color1,
-#color2,
-#color3,
-#color4,
-#color5 {
-  opacity: 0;
-  transition: opacity 1s;
-}
-
-#colorcodepadding .icon-box .padding-icon {
-  padding-right: 10px;
-}
-
-#colorcodepadding .icon-box .colorbox {
-  width: 32px;
-  height: 32px;
-  border-radius: 10px;
-}
-
-#colorcodepadding .icon-box {
-  display: flex;
-  align-items: center;
-  padding-bottom: 20px;
-}
-
-#colorcodepadding .icon-box i {
-  font-size: 32px;
-  padding-right: 10px;
-  line-height: 1;
-}
-
-#colorcodepadding .icon-box h3 {
-  font-weight: 500;
-  margin: 0;
-  padding: 0;
-  line-height: 1;
-  font-size: 16px;
-}
-
-#colorcodepadding .icon-box h3 a {
-  color: #ffffff;
-  transition: ease-in-out 0.3s;
-}
-
-/*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
 #header {
@@ -109,6 +50,8 @@ h6 {
 .container {
   margin-left: 40px;
   padding-left: 0px;
+  margin-right: 0 !important;
+  padding-right: 0 !important;
 }
 
 #header .logo {
@@ -144,6 +87,22 @@ h6 {
 # Navigation Menu
 --------------------------------------------------------------*/
 /* Desktop Navigation */
+
+i {
+  font-size: 25px;
+  color: #ffffff;
+  margin-top: 1%;
+  margin-left: 62%;
+}
+
+.ri-notification-3-line {
+  margin-left: 3% !important;
+}
+
+.nav-menu {
+  width: 100%;
+  display: flex !important;
+}
 
 .nav-menu ul {
   margin: 0;
