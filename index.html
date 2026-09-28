@@ -145,12 +145,12 @@
         
         <div class="nx-carousel-base-wrapper">
             <!-- Direction Control Action Bars -->
-            <button class="nx-carousel-arrow-btn nx-btn-left" onclick="moveNxCarousel(-1)">&#10094;</button>
-            <button class="nx-carousel-arrow-btn nx-btn-right" onclick="moveNxCarousel(1)">&#10095;</button>
+            <button class="nx-carousel-arrow-btn nx-btn-left" onclick="moveNxCarousel(-1, 'c1')">&#10094;</button>
+            <button class="nx-carousel-arrow-btn nx-btn-right" onclick="moveNxCarousel(1, 'c1')">&#10095;</button>
             
             <!-- Clipping Window Framework -->
             <div class="nx-carousel-clip-viewport">
-                <div class="nx-carousel-moving-track" id="nxMovieTrack">
+                <div class="nx-carousel-moving-track" id="c1">
                     <div class="nx-carousel-card-item" onmouseenter="playPreview(this)" onmouseleave="stopPreview(this)">
                       <img src="assets/img/portfolio/freelance/kobras.jpg" alt="Card 1">
                       <video class="nx-video-preview" muted loop playsinline preload="none" disablepictureinpicture controlsList="nodownload nopictureinpicture">
@@ -167,6 +167,62 @@
             </div>
         </div>
     </section>
+          <!-- HORIZONTAL CAROUSEL CONTAINER -->
+          <section class="nx-carousel-section">
+            <h2 class="nx-carousel-heading">Trending Now</h2>
+            
+            <div class="nx-carousel-base-wrapper">
+                <!-- Direction Control Action Bars -->
+                <button class="nx-carousel-arrow-btn nx-btn-left" onclick="moveNxCarousel(-1, 'c2')">&#10094;</button>
+                <button class="nx-carousel-arrow-btn nx-btn-right" onclick="moveNxCarousel(1, 'c2')">&#10095;</button>
+                
+                <!-- Clipping Window Framework -->
+                <div class="nx-carousel-clip-viewport">
+                    <div class="nx-carousel-moving-track" id="c2">
+                        <div class="nx-carousel-card-item">
+                          <div class="num">1</div>
+                          <div class="num-img"><img src="assets/img/portfolio/freelance/kobras.jpg" alt="Card 1"></div>
+                        </div>
+                        <div class="nx-carousel-card-item">
+                          <div class="num">2</div>
+                          <div class="num-img"><img src="assets/img/portfolio/freelance/midas.jpg" alt="Card 1"></div>
+                        </div>
+                        <div class="nx-carousel-card-item">
+                          <div class="num">3</div>
+                          <div class="num-img"><img src="assets/img/portfolio/freelance/1more.png" alt="Card 1"></div>
+                        </div>
+                        <div class="nx-carousel-card-item">
+                          <div class="num">4</div>
+                          <div class="num-img"><img src="assets/img/portfolio/freelance/cali.jpg" alt="Card 1"></div>
+                        </div>
+                        <div class="nx-carousel-card-item">
+                          <div class="num">5</div>
+                          <div class="num-img"><img src="assets/img/portfolio/freelance/certificate.jpg" alt="Card 1"></div>
+                        </div>
+                        <div class="nx-carousel-card-item">
+                          <div class="num">6</div>
+                          <div class="num-img"><img src="assets/img/portfolio/freelance/ck.png" alt="Card 1"></div>
+                        </div>
+                        <div class="nx-carousel-card-item">
+                          <div class="num">7</div>
+                          <div class="num-img"><img src="assets/img/portfolio/freelance/dropset.jpg" alt="Card 1"></div>
+                        </div>
+                        <div class="nx-carousel-card-item">
+                          <div class="num">8</div>
+                          <div class="num-img"><img src="assets/img/portfolio/freelance/azera.jpg" alt="Card 1"></div>
+                        </div>
+                        <div class="nx-carousel-card-item">
+                          <div class="num">9</div>
+                          <div class="num-img"><img src="assets/img/portfolio/freelance/drstrange.jpg" alt="Card 1"></div>
+                        </div>
+                        <div class="nx-carousel-card-item">
+                          <div class="num">10</div>
+                          <div class="num-img"><img src="assets/img/portfolio/freelance/clglogo.jpg" alt="Card 1"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     <!-- End Portfolio Section -->
 
     <!-- ======= Footer ======= -->
