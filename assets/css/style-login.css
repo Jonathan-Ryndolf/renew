@@ -17,14 +17,6 @@
   padding: 0;
 }
 
-*:hover {
-  cursor: url("../img/hover.png"), default !important;
-}
-
-html {
-  cursor: url("../img/cursor1.png"), default !important;
-}
-
 body {
   color: #000000;
   overflow-x: hidden;
