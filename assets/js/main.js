@@ -81,30 +81,26 @@ window.addEventListener("resize", () => {
 /* =============================================================
 3. CAROUSEL VIDEO COMPONENT HOVER SNIPPET HANDLERS
      ============================================================= */
-function playPreview(cardElement) {
-  const video = cardElement.querySelector(".nx-video-preview");
+function playPreview(element) {
+  // 1. Add the utility class to trigger the smooth CSS opacity cross-fade
+  element.classList.add("is-playing");
 
+  // 2. Safely check if there is an actual video to play (leaves images alone!)
+  const video = element.querySelector("video.nx-video-preview");
   if (video) {
-    if (video.getAttribute("preload") === "none") {
-      video.setAttribute("preload", "auto");
-    }
-
     video
       .play()
-      .then(() => {
-        cardElement.classList.add("is-playing");
-      })
-      .catch((error) => {
-        console.log("Browser auto-play safety blocked video start:", error);
-      });
+      .catch((err) => console.log("Video playback paused or blocked"));
   }
 }
 
-function stopPreview(cardElement) {
-  const video = cardElement.querySelector(".nx-video-preview");
+function stopPreview(element) {
+  // 1. Remove the class to fade back to the primary starting image
+  element.classList.remove("is-playing");
 
+  // 2. Safely pause only if a video element exists
+  const video = element.querySelector("video.nx-video-preview");
   if (video) {
-    cardElement.classList.remove("is-playing");
     video.pause();
     video.currentTime = 0;
   }
