@@ -311,7 +311,7 @@
                 <div class="num-img">
                   <img src="assets/img/pics/10/2.png" alt="Card 1" />
                   <img
-                    src="assets/img/pics/10/3.png"
+                    src="assets/img/pics/10/02.png"
                     class="nx-video-preview"
                     alt="Card 2 Hover"
                   />
@@ -338,10 +338,19 @@
                   </video>
                 </div>
               </div>
-              <div class="nx-carousel-card-item">
+              <div
+                class="nx-carousel-card-item"
+                onmouseenter="playPreview(this)"
+                onmouseleave="stopPreview(this)"
+              >
                 <div class="num">4</div>
                 <div class="num-img">
                   <img src="assets/img/pics/10/4.png" alt="Card 1" />
+                  <img
+                    src="assets/img/pics/10/04.png"
+                    class="nx-video-preview"
+                    alt="Card 2 Hover"
+                  />
                 </div>
               </div>
               <div
@@ -407,16 +416,34 @@
                   </video>
                 </div>
               </div>
-              <div class="nx-carousel-card-item">
+              <div
+                class="nx-carousel-card-item"
+                onmouseenter="playPreview(this)"
+                onmouseleave="stopPreview(this)"
+              >
                 <div class="num">8</div>
                 <div class="num-img">
                   <img src="assets/img/pics/10/8.png" alt="Card 1" />
+                  <img
+                    src="assets/img/pics/10/08.png"
+                    class="nx-video-preview"
+                    alt="Card 2 Hover"
+                  />
                 </div>
               </div>
-              <div class="nx-carousel-card-item">
+              <div
+                class="nx-carousel-card-item"
+                onmouseenter="playPreview(this)"
+                onmouseleave="stopPreview(this)"
+              >
                 <div class="num">9</div>
                 <div class="num-img">
                   <img src="assets/img/pics/10/9.png" alt="Card 1" />
+                  <img
+                    src="assets/img/pics/10/09.png"
+                    class="nx-video-preview"
+                    alt="Card 2 Hover"
+                  />
                 </div>
               </div>
               <div
@@ -439,6 +466,132 @@
                     <source src="assets/img/pics/10/10.mp4" type="video/mp4" />
                   </video>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- HORIZONTAL CAROUSEL CONTAINER -->
+      <section id="c01" class="nx-carousel-section">
+        <h2 class="nx-carousel-heading">Trending Now</h2>
+
+        <div class="nx-carousel-base-wrapper">
+          <!-- Direction Control Action Bars -->
+          <button
+            class="nx-carousel-arrow-btn nx-btn-left"
+            onclick="moveNxCarousel(-1, 'c3')"
+          >
+            &#10094;
+          </button>
+          <button
+            class="nx-carousel-arrow-btn nx-btn-right"
+            onclick="moveNxCarousel(1, 'c3')"
+          >
+            &#10095;
+          </button>
+
+          <!-- Clipping Window Framework -->
+          <div class="nx-carousel-clip-viewport">
+            <div class="nx-carousel-moving-track" id="c3">
+              <div
+                class="nx-carousel-card-item"
+                onmouseenter="playPreview(this)"
+                onmouseleave="stopPreview(this)"
+              >
+                <img src="assets/img/pics/kobras.jpg" alt="Card 1" />
+                <video
+                  class="nx-video-preview"
+                  muted
+                  loop
+                  playsinline
+                  preload="none"
+                  disablepictureinpicture
+                  controlsList="nodownload nopictureinpicture"
+                >
+                  <source src="assets/img/pics/1v.mp4" type="video/mp4" />
+                </video>
+              </div>
+              <div class="nx-carousel-card-item">
+                <img src="assets/img/pics/midas.jpg" alt="Card 2" />
+              </div>
+              <div class="nx-carousel-card-item">
+                <img src="assets/img/pics/1more.png" alt="Card 3" />
+              </div>
+              <div class="nx-carousel-card-item">
+                <img src="assets/img/pics/cali.jpg" alt="Card 4" />
+              </div>
+              <div class="nx-carousel-card-item">
+                <img src="assets/img/pics/certificate.jpg" alt="Card 5" />
+              </div>
+              <div class="nx-carousel-card-item">
+                <img src="assets/img/pics/ck.png" alt="Card 6" />
+              </div>
+              <div class="nx-carousel-card-item">
+                <img src="assets/img/pics/dropset.jpg" alt="Card 7" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- HORIZONTAL CAROUSEL CONTAINER -->
+      <section id="c01" class="nx-carousel-section">
+        <h2 class="nx-carousel-heading">Trending Now</h2>
+
+        <div class="nx-carousel-base-wrapper">
+          <!-- Direction Control Action Bars -->
+          <button
+            class="nx-carousel-arrow-btn nx-btn-left"
+            onclick="moveNxCarousel(-1, 'c3')"
+          >
+            &#10094;
+          </button>
+          <button
+            class="nx-carousel-arrow-btn nx-btn-right"
+            onclick="moveNxCarousel(1, 'c3')"
+          >
+            &#10095;
+          </button>
+
+          <!-- Clipping Window Framework -->
+          <div class="nx-carousel-clip-viewport">
+            <div class="nx-carousel-moving-track" id="c3">
+              <div
+                class="nx-carousel-card-item"
+                onmouseenter="playPreview(this)"
+                onmouseleave="stopPreview(this)"
+              >
+                <img src="assets/img/pics/kobras.jpg" alt="Card 1" />
+                <video
+                  class="nx-video-preview"
+                  muted
+                  loop
+                  playsinline
+                  preload="none"
+                  disablepictureinpicture
+                  controlsList="nodownload nopictureinpicture"
+                >
+                  <source src="assets/img/pics/1v.mp4" type="video/mp4" />
+                </video>
+              </div>
+              <div class="nx-carousel-card-item">
+                <img src="assets/img/pics/midas.jpg" alt="Card 2" />
+              </div>
+              <div class="nx-carousel-card-item">
+                <img src="assets/img/pics/1more.png" alt="Card 3" />
+              </div>
+              <div class="nx-carousel-card-item">
+                <img src="assets/img/pics/cali.jpg" alt="Card 4" />
+              </div>
+              <div class="nx-carousel-card-item">
+                <img src="assets/img/pics/certificate.jpg" alt="Card 5" />
+              </div>
+              <div class="nx-carousel-card-item">
+                <img src="assets/img/pics/ck.png" alt="Card 6" />
+              </div>
+              <div class="nx-carousel-card-item">
+                <img src="assets/img/pics/dropset.jpg" alt="Card 7" />
               </div>
             </div>
           </div>
