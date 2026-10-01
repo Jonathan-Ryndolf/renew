@@ -752,7 +752,7 @@ h6 {
   font-weight: 600;
   font-family: Poppins;
   color: #ffff;
-  background-color: #ff0000;
+  background-color: #e70710;
 }
 
 /* ==========================================
@@ -1081,7 +1081,7 @@ NETFLIX ARROW CONTROLS WITH SMOOTH GRADIENT TRANSITIONS
 }
 
 .btn-confirm {
-  background-color: #ff0000;
+  background-color: #e70710;
   color: #ffffff;
 }
 
