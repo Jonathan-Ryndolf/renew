@@ -741,8 +741,8 @@ h6 {
 }
 
 .recent {
-  font-size: 13px;
-  padding: 3px 10px 0px 10px;
+  font-size: 12px;
+  padding: 2px 8px 1px 8px;
   border-radius: 5px 5px 0px 0px;
   position: absolute;
   bottom: 0;
