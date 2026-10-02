@@ -241,6 +241,10 @@ h6 {
   }
 }
 
+.home a {
+  background-color: #ffffff37 !important;
+}
+
 /* Mobile Navigation */
 .mobile-nav-toggle {
   position: fixed;
