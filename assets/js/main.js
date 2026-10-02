@@ -226,7 +226,7 @@ if (confirmBtn) {
     if (finalChosenValue === "unlock_key") {
       isPlayButtonUnlocked = true;
       if (playButton) {
-        playButton.href = "/unlocked-movie.html";
+        playButton.href = "/player.html";
         if (favDialog) favDialog.close();
         playButton.click();
       }

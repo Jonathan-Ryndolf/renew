@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netflix Style Video Player</title>
+    <!-- Linked your external CSS style sheet -->
+    <link rel="stylesheet" href="/assets/css/player.css" />
+  </head>
+  <body>
+    <div class="video-container">
+      <!-- Update src="..." to your own local video or web URL link -->
+      <video
+        class="video-element"
+        src="/assets/img/hi.mp4"
+        preload="metadata"
+        disablepictureinpicture
+        controlslist="nodownload nopictureinpicture"
+      ></video>
+
+      <!-- Top Header Back Button -->
+      <div class="player-header">
+        <a href="/index.html">
+          <button class="back-btn">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"
+              />
+            </svg>
+          </button>
+        </a>
+      </div>
+
+      <!-- Toolbar controls -->
+      <div class="player-controls-bottom">
+        <div class="progress-container">
+          <div class="progress-bar">
+            <div class="progress-filled"></div>
+            <div class="progress-handle"></div>
+          </div>
+        </div>
+
+        <div class="control-toolbar">
+          <div class="left-toolbar">
+            <button class="toolbar-btn play-btn">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
+            </button>
+            <button class="toolbar-btn skip-back-btn">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12.5 8c-2.65 0-5.05 1-6.9 2.6L3.2 8.2V15h6.8l-2.7-2.7c1.5-1.2 3.4-1.9 5.4-1.9 4.3 0 7.9 3.2 8.5 7.4l2.5-.4c-.8-5.3-5.4-9.4-11-9.4z"
+                />
+              </svg>
+            </button>
+            <button class="toolbar-btn skip-fwd-btn">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M11.5 8c2.65 0 5.05 1 6.9 2.6l2.4-2.4V15h-6.8l2.7-2.7c-1.5-1.2-3.4-1.9-5.4-1.9-4.3 0-7.9 3.2-8.5 7.4l-2.5-.4c.8-5.3 5.4-9.4 11-9.4z"
+                />
+              </svg>
+            </button>
+            <button class="toolbar-btn volume-btn">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <div class="center-title">
+            <span>Coffee Prince E1 Episode 1</span>
+          </div>
+
+          <div class="right-toolbar">
+            <span class="time-display">0:00 / 0:00</span>
+            <button class="toolbar-btn fullscreen-btn">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Linked your external JavaScript functionality file -->
+    <script src="/assets/js/player.js"></script>
+  </body>
+</html>
