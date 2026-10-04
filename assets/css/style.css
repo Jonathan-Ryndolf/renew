@@ -1485,10 +1485,6 @@ NETFLIX BELL INTERACTIVE DROPDOWN MESSAGES
   right: auto !important;
 }
 
-.lx-env-box-wrapper:hover {
-  transform: scale(1.02) !important;
-}
-
 /* Fixed positioning coordinate alignment sleeve */
 .lx-env-pocket-container {
   position: relative !important;
@@ -1523,7 +1519,7 @@ NETFLIX BELL INTERACTIVE DROPDOWN MESSAGES
   height: 0 !important;
   border-top: 100px solid transparent !important;
   border-bottom: 100px solid transparent !important;
-  border-left: 160px solid #c98282 !important;
+  border-left: 160px solid #a28354 !important;
   z-index: 3 !important;
 }
 
@@ -1536,7 +1532,7 @@ NETFLIX BELL INTERACTIVE DROPDOWN MESSAGES
   height: 0 !important;
   border-top: 100px solid transparent !important;
   border-bottom: 100px solid transparent !important;
-  border-right: 160px solid #82b0c9 !important;
+  border-right: 160px solid #a28354 !important;
   z-index: 3 !important;
 }
 
@@ -1549,7 +1545,7 @@ NETFLIX BELL INTERACTIVE DROPDOWN MESSAGES
   height: 0 !important;
   border-left: 160px solid transparent !important;
   border-right: 160px solid transparent !important;
-  border-bottom: 110px solid #bda073 !important;
+  border-bottom: 110px solid #8c7045 !important;
   z-index: 3 !important;
 }
 
