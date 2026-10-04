@@ -75,10 +75,12 @@
               <div class="nx-notif-arrow"></div>
               <!-- Sleek pointer arrow -->
               <ul class="nx-notif-list">
-                <li class="nx-notif-item">
-                  <span class="nx-notif-dot"></span>
+                <!-- Update your notification item inside the navigation dropdown list to include the custom ID -->
+                <li class="nx-notif-item" id="firstNotif">
+                  <div class="nx-notif-dot"></div>
                   <p>New <strong>alternate-reality image</strong> received!</p>
                 </li>
+
                 <li class="nx-notif-item">
                   <span class="nx-notif-dot"></span>
                   <p>I Love You <strong>Mumu</strong> <3</p>
@@ -95,6 +97,35 @@
       </div>
     </header>
     <!-- End Header -->
+
+    <!-- The Envelope Viewport Wrapper -->
+    <div id="envelopeOverlay" class="lx-env-overlay-mask">
+      <div class="lx-env-box-wrapper" id="envelopeWrapper">
+        <div class="lx-env-pocket-container">
+          <!-- 1. The top opening folding flap triangle -->
+          <div class="lx-env-paper-flap"></div>
+
+          <!-- 2. The inside hidden letter photo image card -->
+          <div class="lx-env-hidden-card" id="letterImageCard">
+            <img
+              src="/assets/img/hehe2.png"
+              class="lx-env-surprise-img"
+              alt="Surprise Image"
+            />
+          </div>
+
+          <!-- 💡 THE CURE: Separate physical triangles to match your custom drawing layout -->
+          <!-- Left flap triangle layer (Red profile in sketch) -->
+          <div class="lx-env-side-left"></div>
+
+          <!-- Right flap triangle layer (Blue profile in sketch) -->
+          <div class="lx-env-side-right"></div>
+
+          <!-- Bottom flap triangle layer (Yellow profile in sketch) -->
+          <div class="lx-env-side-bottom"></div>
+        </div>
+      </div>
+    </div>
 
     <!-- ======= Hero Section ======= -->
 

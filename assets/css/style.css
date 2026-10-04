@@ -1378,6 +1378,7 @@ NETFLIX BELL INTERACTIVE DROPDOWN MESSAGES
 /* Change message background separately on individual list item rows */
 .nx-notif-item:hover {
   background-color: rgba(255, 255, 255, 0.05) !important;
+  cursor: pointer;
 }
 
 .nx-notif-item p {
@@ -1423,4 +1424,200 @@ NETFLIX BELL INTERACTIVE DROPDOWN MESSAGES
 
 #p-ico a {
   padding: 0px 20px 0px 10px !important;
+}
+
+/* =============================================================
+   ISOLATED CUSTOM MULTI-FLAP ENVELOPE MODAL COMPONENT
+   ============================================================= */
+
+/* Darkened backdrop container with forceful layer center isolation */
+.lx-env-overlay-mask {
+  /* 💡 THE CURE PART 1: Erase container layout completely from view upon page loading */
+  display: none !important;
+
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  background-color: rgba(0, 0, 0, 0.88) !important;
+  z-index: 9999999 !important; /* Forces it over your header navigation zone */
+
+  /* Flex centering rules to space it beautifully */
+  align-items: center !important;
+  justify-content: center !important;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+
+  transform: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Visibility toggle class triggered via JavaScript actions */
+.lx-env-overlay-mask.lx-env-activated {
+  /* 💡 THE CURE PART 2: Forcefully mount the layout using flex centering when notification is clicked */
+  display: flex !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Responsive envelope core frame box */
+.lx-env-box-wrapper {
+  position: relative !important;
+  width: 320px !important;
+  height: 200px !important;
+  background-color: #d1b894 !important; /* Core paper backing tone */
+  cursor: pointer !important;
+  border-radius: 6px !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6) !important;
+  transition: transform 0.3s ease !important;
+
+  margin: 0 !important;
+  transform: none !important;
+  top: auto !important;
+  left: auto !important;
+  bottom: auto !important;
+  right: auto !important;
+}
+
+.lx-env-box-wrapper:hover {
+  transform: scale(1.02) !important;
+}
+
+/* Fixed positioning coordinate alignment sleeve */
+.lx-env-pocket-container {
+  position: relative !important;
+  width: 320px !important;
+  height: 200px !important;
+  margin: 0 auto !important;
+  display: block !important;
+  overflow: visible !important;
+}
+
+/* 1. TOP TRIANGULAR OPENING FOLD FLAP */
+.lx-env-paper-flap {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+  border-left: 160px solid transparent !important;
+  border-right: 160px solid transparent !important;
+  border-top: 110px solid #bd9b6d !important;
+  transform-origin: top !important;
+  transition: transform 0.4s ease 0.1s !important;
+  z-index: 4 !important;
+}
+
+/* 2. THE LEFT TRIANGLE SIDE FOLD (Red Profile in Sketch) */
+.lx-env-side-left {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+  border-top: 100px solid transparent !important;
+  border-bottom: 100px solid transparent !important;
+  border-left: 160px solid #c98282 !important;
+  z-index: 3 !important;
+}
+
+/* 3. THE RIGHT TRIANGLE SIDE FOLD (Blue Profile in Sketch) */
+.lx-env-side-right {
+  position: absolute !important;
+  top: 0 !important;
+  left: 160px !important;
+  width: 0 !important;
+  height: 0 !important;
+  border-top: 100px solid transparent !important;
+  border-bottom: 100px solid transparent !important;
+  border-right: 160px solid #82b0c9 !important;
+  z-index: 3 !important;
+}
+
+/* 4. THE BOTTOM TRIANGLE SLEEVE (Yellow/Gold Profile in Sketch) */
+.lx-env-side-bottom {
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+  border-left: 160px solid transparent !important;
+  border-right: 160px solid transparent !important;
+  border-bottom: 110px solid #bda073 !important;
+  z-index: 3 !important;
+}
+
+/* 5. THE PULL OUT PHOTO CARD (Tucked behind the 3 folding panels) */
+/* 5. THE PHOTO CARD WRAPPER (CROPPED STATE WHILE INSIDE ENVELOPE) */
+.lx-env-hidden-card {
+  position: absolute !important;
+  top: 15px !important;
+  left: 50% !important;
+  transform: translateX(-50%) scale(0.95) !important;
+
+  /* 💡 FIXED CROPPED BOUNDARIES INSIDE THE POCKET */
+  width: 290px !important;
+  height: 170px !important;
+
+  background: #ffffff !important;
+  padding: 6px !important;
+  border-radius: 4px !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important;
+  z-index: 1 !important;
+
+  box-sizing: border-box !important;
+  overflow: hidden !important; /* Cleans away overspilling asset edges */
+
+  /* Animate height shifts changes smoothly alongside translation parameters */
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1),
+    height 0.4s ease-in-out, box-shadow 0.6s ease !important;
+}
+
+/* Isolate core surprise image element properties explicitly */
+.lx-env-surprise-img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important; /* 💡 Crops the asset edges cleanly while inside the pockets */
+  display: block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* =============================================================
+   INTERACTIVE TRIGGER TRANSITION OVERRIDES
+   ============================================================= */
+
+/* Phase A: Swing flap 180 degrees upwards out of the way */
+.lx-env-box-wrapper.lx-env-open-flap .lx-env-paper-flap {
+  transform: rotateX(180deg) !important;
+  z-index: 0 !important;
+}
+/* Force image to safely transition to its full native parameters as it scales up */
+.lx-env-hidden-card.lx-env-reveal-ratio .lx-env-surprise-img {
+  /* 💡 THE CURE PART 2: Swapping to auto and contain forces the full uncropped asset details back */
+  height: auto !important;
+  object-fit: contain !important;
+}
+/* 💡 UNLOCKED STATE INJECTED BY JAVASCRIPT UPON FLOATING */
+.lx-env-hidden-card.lx-env-reveal-ratio {
+  /* 💡 THE CURE PART 1: Releases the crop box height to inherit the image's original ratio */
+  height: auto !important;
+}
+
+/* =============================================================
+   INTERACTIVE EXTRACTION UTILITY TRANSITIONS (LARGE CENTER FIX)
+   ============================================================= */
+
+/* Slide the card up out of the front pocket folds cleanly */
+.lx-env-box-wrapper.lx-env-pull-out .lx-env-hidden-card {
+  transform: translate(-50%, -50%) scale(2.2) !important;
+  top: 35% !important;
+  z-index: 5 !important;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.7) !important;
 }
