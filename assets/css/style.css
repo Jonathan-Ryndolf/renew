@@ -1427,7 +1427,7 @@ NETFLIX BELL INTERACTIVE DROPDOWN MESSAGES
 }
 
 /* =============================================================
-   ISOLATED CUSTOM MULTI-FLAP ENVELOPE MODAL COMPONENT
+    ISOLATED CUSTOM MULTI-FLAP ENVELOPE MODAL COMPONENT
    ============================================================= */
 
 /* Darkened backdrop container with forceful layer center isolation */
@@ -1473,10 +1473,10 @@ NETFLIX BELL INTERACTIVE DROPDOWN MESSAGES
   height: 200px !important;
   background-color: #d1b894 !important; /* Core paper backing tone */
   cursor: pointer !important;
-  border-radius: 6px !important;
+  border-bottom-left-radius: 10px !important;
+  border-bottom-right-radius: 10px !important;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6) !important;
   transition: transform 0.3s ease !important;
-
   margin: 0 !important;
   transform: none !important;
   top: auto !important;
@@ -1521,6 +1521,7 @@ NETFLIX BELL INTERACTIVE DROPDOWN MESSAGES
   border-bottom: 100px solid transparent !important;
   border-left: 160px solid #a28354 !important;
   z-index: 3 !important;
+  border-bottom-left-radius: 10px !important;
 }
 
 /* 3. THE RIGHT TRIANGLE SIDE FOLD (Blue Profile in Sketch) */
@@ -1534,6 +1535,7 @@ NETFLIX BELL INTERACTIVE DROPDOWN MESSAGES
   border-bottom: 100px solid transparent !important;
   border-right: 160px solid #a28354 !important;
   z-index: 3 !important;
+  border-bottom-right-radius: 10px !important;
 }
 
 /* 4. THE BOTTOM TRIANGLE SLEEVE (Yellow/Gold Profile in Sketch) */
@@ -1547,6 +1549,8 @@ NETFLIX BELL INTERACTIVE DROPDOWN MESSAGES
   border-right: 160px solid transparent !important;
   border-bottom: 110px solid #8c7045 !important;
   z-index: 3 !important;
+  border-bottom-left-radius: 10px !important;
+  border-bottom-right-radius: 10px !important;
 }
 
 /* 5. THE PULL OUT PHOTO CARD (Tucked behind the 3 folding panels) */
@@ -1563,7 +1567,6 @@ NETFLIX BELL INTERACTIVE DROPDOWN MESSAGES
 
   background: #ffffff !important;
   padding: 6px !important;
-  border-radius: 4px !important;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important;
   z-index: 1 !important;
 
