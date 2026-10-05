@@ -387,11 +387,13 @@ a:hover {
   width: 93.5%;
   height: 92%;
   border-radius: 30px;
-  margin-top: 13vh;
   overflow: hidden;
   display: block;
   margin-left: auto;
   margin-right: auto;
+  position: relative; /* 💡 REQUIRED: Sets bounds for the video layer */
+  z-index: 1;
+  margin-top: 90px;
 }
 
 #hero img {
@@ -925,19 +927,6 @@ NETFLIX ARROW CONTROLS WITH SMOOTH GRADIENT TRANSITIONS
 .nx-carousel-card-item.is-playing .nx-video-preview {
   opacity: 1;
   z-index: 3; /* Brings the video layer cleanly to the top position */
-}
-
-/* Ensure the image container works as a stable parent anchor */
-.hero-img {
-  width: 93.5%;
-  height: 92%;
-  border-radius: 30px;
-  overflow: hidden;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative; /* 💡 REQUIRED: Sets bounds for the video layer */
-  z-index: 1;
 }
 
 /* Force both media types to inherit the container dimensions */
