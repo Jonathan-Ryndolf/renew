@@ -418,8 +418,12 @@ a:hover {
 .title-logo {
   position: absolute;
   width: 400px;
+  max-width: 400px;
+  max-height: 184px;
   margin-left: 4%;
   margin-top: 40vh;
+  z-index: 10;
+  pointer-events: none;
 }
 
 .hero-deets {
@@ -427,6 +431,7 @@ a:hover {
   position: absolute;
   margin-left: 5%;
   margin-top: 65vh;
+  z-index: 10;
 }
 
 .genre-stuff {
@@ -967,15 +972,6 @@ NETFLIX ARROW CONTROLS WITH SMOOTH GRADIENT TRANSITIONS
 .hero-img.is-playing-video .hero-media-video {
   opacity: 1;
   z-index: 3; /* Smoothly brings the active video over the image banner background */
-}
-
-/* Fix your text details layer index so text always renders clearly over playing video frames */
-.hero-deets {
-  z-index: 10; /* Keeps all text content safely on top of structural layouts */
-}
-.title-logo {
-  z-index: 10;
-  pointer-events: none;
 }
 
 /* ==========================================
