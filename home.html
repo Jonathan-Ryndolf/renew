@@ -50,7 +50,7 @@
     <header id="header" class="fixed-top">
       <div class="container d-flex align-items-center">
         <a onclick="secureRedirect(event, '/home.html')" class="logo"
-          ><img src="assets/img/favicon.png" alt="" class="img-fluid"
+          ><img src="assets/img/favicon.png"
         /></a>
 
         <nav class="nav-menu d-none d-lg-block">
@@ -67,34 +67,38 @@
               >
             </li>
           </ul>
-          <i class="ri-search-line"></i>
-          <div class="nx-nav-notification-wrapper">
-            <i class="ri-notification-3-line nx-bell-trigger"></i>
+          <div class="rt-logos">
+            <i class="ri-search-line"></i>
+            <div class="nx-nav-notification-wrapper">
+              <i class="ri-notification-3-line nx-bell-trigger"></i>
 
-            <!-- The Hidden Messages Dropdown Tray -->
-            <div class="nx-notification-dropdown">
-              <div class="nx-notif-arrow"></div>
-              <!-- Sleek pointer arrow -->
-              <ul class="nx-notif-list">
-                <!-- Update your notification item inside the navigation dropdown list to include the custom ID -->
-                <li class="nx-notif-item" id="firstNotif">
-                  <div class="nx-notif-dot"></div>
-                  <p>New <strong>alternate-reality image</strong> received!</p>
-                </li>
+              <!-- The Hidden Messages Dropdown Tray -->
+              <div class="nx-notification-dropdown">
+                <div class="nx-notif-arrow"></div>
+                <!-- Sleek pointer arrow -->
+                <ul class="nx-notif-list">
+                  <!-- Update your notification item inside the navigation dropdown list to include the custom ID -->
+                  <li class="nx-notif-item" id="firstNotif">
+                    <div class="nx-notif-dot"></div>
+                    <p>
+                      New <strong>alternate-reality image</strong> received!
+                    </p>
+                  </li>
 
-                <li class="nx-notif-item">
-                  <span class="nx-notif-dot"></span>
-                  <p>I Love You <strong>Mumu</strong> <3</p>
-                </li>
-                <li class="nx-notif-item read">
-                  <p>Videos are now tagged as Recently added</p>
-                </li>
-              </ul>
+                  <li class="nx-notif-item">
+                    <span class="nx-notif-dot"></span>
+                    <p>I Love You <strong>Mumu</strong> <3</p>
+                  </li>
+                  <li class="nx-notif-item read">
+                    <p>Videos are now tagged as Recently added</p>
+                  </li>
+                </ul>
+              </div>
             </div>
+            <a onclick="secureRedirect(event, '/index.html')" class="anime"
+              ><img src="/assets/img/an.JPG"
+            /></a>
           </div>
-          <a onclick="secureRedirect(event, '/index.html')"
-            ><img src="/assets/img/an.JPG"
-          /></a>
         </nav>
         <!-- .nav-menu -->
       </div>

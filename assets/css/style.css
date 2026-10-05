@@ -24,7 +24,6 @@ body {
   color: #000000;
   overflow-x: hidden;
   background: linear-gradient(180deg, #2c311d 0%, #151515 15%);
-  /* background: linear-gradient(180deg, #ffffff 0%, #151515 15%); */
 }
 
 body,
@@ -96,11 +95,14 @@ a:hover {
 --------------------------------------------------------------*/
 /* Desktop Navigation */
 
+.ri-search-line {
+}
+
 #header i {
   font-size: 25px !important;
   color: #ffffff;
-  margin-top: 1% !important;
-  margin-left: 68% !important;
+  margin-top: auto;
+  margin-bottom: auto;
   cursor: pointer;
   background-color: #ffffff00;
   border-radius: 50px;
@@ -108,13 +110,22 @@ a:hover {
   transition: all 0.2s ease;
 }
 
+.rt-logos {
+  display: flex;
+  margin-left: 47vw !important;
+}
+
 #header i:hover {
   background-color: #ffffff3b;
 }
 
+.anime {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
 .nav-menu img {
-  margin-top: 62.6%;
-  margin-left: 230%;
+  margin-left: 9vh;
   width: 30px;
   height: 30px;
   border-radius: 5px;
@@ -401,14 +412,14 @@ a:hover {
   position: absolute;
   width: 400px;
   margin-left: 4%;
-  margin-top: 15%;
+  margin-top: 40vh;
 }
 
 .hero-deets {
   color: #ffffff;
   position: absolute;
   margin-left: 5%;
-  margin-top: 27%;
+  margin-top: 65vh;
 }
 
 .genre-stuff {
@@ -925,17 +936,9 @@ NETFLIX ARROW CONTROLS WITH SMOOTH GRADIENT TRANSITIONS
 
 /* Fix your text details layer index so text always renders clearly over playing video frames */
 .hero-deets {
-  color: #ffffff;
-  position: absolute;
-  margin-left: 5%;
-  margin-top: 27%;
   z-index: 10; /* Keeps all text content safely on top of structural layouts */
 }
 .title-logo {
-  position: absolute;
-  width: 400px;
-  margin-left: 4%;
-  margin-top: 15%;
   z-index: 10;
   pointer-events: none;
 }
@@ -1311,8 +1314,8 @@ NETFLIX BELL INTERACTIVE DROPDOWN MESSAGES
 
 /* The relative anchor box keeping the dropdown floating in place */
 .nx-nav-notification-wrapper {
-  margin-top: 1.4%;
-  margin-left: 0.5%;
+  margin-top: auto;
+  margin-bottom: auto;
   width: 0px;
   position: relative;
 }
