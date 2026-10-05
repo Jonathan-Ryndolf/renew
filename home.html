@@ -8,8 +8,8 @@
     <meta content="" name="keywords" />
 
     <!-- Browser Logo -->
-    <link href="assets/img/hrt.png" rel="icon" />
-    <link href="assets/img/hrt.png" rel="apple-touch-icon" />
+    <link href="assets/img/hrt.avif" rel="icon" />
+    <link href="assets/img/hrt.avif" rel="apple-touch-icon" />
 
     <!-- Google Fonts -->
     <link
@@ -50,7 +50,7 @@
     <header id="header" class="fixed-top">
       <div class="container d-flex align-items-center">
         <a onclick="secureRedirect(event, '/home.html')" class="logo"
-          ><img src="assets/img/favicon.png"
+          ><img src="assets/img/favicon.avif"
         /></a>
 
         <nav class="nav-menu d-none d-lg-block">
@@ -96,7 +96,7 @@
               </div>
             </div>
             <a onclick="secureRedirect(event, '/index.html')" class="anime"
-              ><img src="/assets/img/an.JPG"
+              ><img src="/assets/img/an.avif"
             /></a>
           </div>
         </nav>
@@ -115,7 +115,7 @@
           <!-- 2. The inside hidden letter photo image card -->
           <div class="lx-env-hidden-card" id="letterImageCard">
             <img
-              src="/assets/img/hehe2.png"
+              src="/assets/img/hehe2.avif"
               class="lx-env-surprise-img"
               alt="Surprise Image"
             />
@@ -139,10 +139,10 @@
     <section id="hero">
       <div class="hero-container">
         <div class="hero-logo">
-          <img src="assets/img/hrt.png" />
+          <img src="assets/img/hrt.avif" />
         </div>
         <div class="title-logo">
-          <img src="assets/img/title.png" />
+          <img src="assets/img/title.avif" />
         </div>
         <div class="hero-deets">
           <div class="genre-stuff">
@@ -173,7 +173,7 @@
         >
           <!-- Base Default Image -->
           <img
-            src="assets/img/pics/cover/1.png"
+            src="assets/img/pics/cover/1.avif"
             class="hero-media-base"
             alt="Hero Base"
           />
@@ -188,7 +188,17 @@
             disablepictureinpicture
             controlsList="nodownload nopictureinpicture"
           >
-            <source src="assets/img/pics/cover/hover.mp4" type="video/mp4" />
+            <!-- 1. Main Choice: AV1 (Change the src to your AV1 file path) -->
+            <source
+              src="assets/img/pics/cover/hover.av1.mp4"
+              type="video/mp4; codecs=av01.0.05M.08"
+            />
+
+            <!-- 2. Secondary Fallback: Standard MP4 (H.264) -->
+            <source
+              src="assets/img/pics/cover/hover.mp4"
+              type="video/mp4; codecs=avc1.4d401e"
+            />
           </video>
         </div>
       </div>
@@ -255,25 +265,25 @@
           <div class="nx-carousel-clip-viewport">
             <div class="nx-carousel-moving-track" id="c1">
               <div class="nx-carousel-card-item">
-                <img src="assets/img/pics/movies/hp.png" alt="Card 2" />
+                <img src="assets/img/pics/movies/hp.avif" alt="Card 2" />
               </div>
               <div class="nx-carousel-card-item">
-                <img src="assets/img/pics/movies/ed.png" alt="Card 2" />
+                <img src="assets/img/pics/movies/ed.avif" alt="Card 2" />
               </div>
               <div class="nx-carousel-card-item">
-                <img src="assets/img/pics/movies/bb.png" alt="Card 3" />
+                <img src="assets/img/pics/movies/bb.avif" alt="Card 3" />
               </div>
               <div class="nx-carousel-card-item">
-                <img src="assets/img/pics/movies/av.png" alt="Card 4" />
+                <img src="assets/img/pics/movies/av.avif" alt="Card 4" />
               </div>
               <div class="nx-carousel-card-item">
-                <img src="assets/img/pics/movies/dn.png" alt="Card 5" />
+                <img src="assets/img/pics/movies/dn.avif" alt="Card 5" />
               </div>
               <div class="nx-carousel-card-item">
-                <img src="assets/img/pics/movies/fr.png" alt="Card 6" />
+                <img src="assets/img/pics/movies/fr.avif" alt="Card 6" />
               </div>
               <div class="nx-carousel-card-item">
-                <img src="assets/img/pics/movies/tt.png" alt="Card 7" />
+                <img src="assets/img/pics/movies/tt.avif" alt="Card 7" />
               </div>
             </div>
           </div>
@@ -308,7 +318,7 @@
               >
                 <div class="num">1</div>
                 <div class="num-img">
-                  <img src="assets/img/pics/10/1.png" alt="Card 1" />
+                  <img src="assets/img/pics/10/1.avif" alt="Card 1" />
                   <video
                     class="nx-video-preview"
                     muted
@@ -318,7 +328,7 @@
                     disablepictureinpicture
                     controlsList="nodownload nopictureinpicture"
                   >
-                    <source src="assets/img/pics/10/1.mp4" type="video/mp4" />
+                    <source src="assets/img/pics/10/1.webm" type="video/mp4" />
                   </video>
                 </div>
               </div>
@@ -329,9 +339,9 @@
               >
                 <div class="num">2</div>
                 <div class="num-img">
-                  <img src="assets/img/pics/10/2.png" alt="Card 1" />
+                  <img src="assets/img/pics/10/2.avif" alt="Card 1" />
                   <img
-                    src="assets/img/pics/10/02.png"
+                    src="assets/img/pics/10/02.avif"
                     class="nx-video-preview"
                     alt="Card 2 Hover"
                   />
@@ -344,7 +354,7 @@
               >
                 <div class="num">3</div>
                 <div class="num-img">
-                  <img src="assets/img/pics/10/3.png" alt="Card 1" />
+                  <img src="assets/img/pics/10/3.avif" alt="Card 1" />
                   <video
                     class="nx-video-preview"
                     muted
@@ -354,7 +364,7 @@
                     disablepictureinpicture
                     controlsList="nodownload nopictureinpicture"
                   >
-                    <source src="assets/img/pics/10/3.mp4" type="video/mp4" />
+                    <source src="assets/img/pics/10/3.webm" type="video/mp4" />
                   </video>
                 </div>
               </div>
@@ -365,9 +375,9 @@
               >
                 <div class="num">4</div>
                 <div class="num-img">
-                  <img src="assets/img/pics/10/4.png" alt="Card 1" />
+                  <img src="assets/img/pics/10/4.avif" alt="Card 1" />
                   <img
-                    src="assets/img/pics/10/04.png"
+                    src="assets/img/pics/10/04.avif"
                     class="nx-video-preview"
                     alt="Card 2 Hover"
                   />
@@ -380,7 +390,7 @@
               >
                 <div class="num">5</div>
                 <div class="num-img">
-                  <img src="assets/img/pics/10/5.png" alt="Card 1" />
+                  <img src="assets/img/pics/10/5.avif" alt="Card 1" />
                   <video
                     class="nx-video-preview"
                     muted
@@ -390,7 +400,7 @@
                     disablepictureinpicture
                     controlsList="nodownload nopictureinpicture"
                   >
-                    <source src="assets/img/pics/10/5.mp4" type="video/mp4" />
+                    <source src="assets/img/pics/10/5.webm" type="video/mp4" />
                   </video>
                 </div>
               </div>
@@ -401,7 +411,7 @@
               >
                 <div class="num">6</div>
                 <div class="num-img">
-                  <img src="assets/img/pics/10/6.png" alt="Card 1" />
+                  <img src="assets/img/pics/10/6.avif" alt="Card 1" />
                   <video
                     class="nx-video-preview"
                     muted
@@ -411,7 +421,7 @@
                     disablepictureinpicture
                     controlsList="nodownload nopictureinpicture"
                   >
-                    <source src="assets/img/pics/10/6.mp4" type="video/mp4" />
+                    <source src="assets/img/pics/10/6.webm" type="video/mp4" />
                   </video>
                 </div>
               </div>
@@ -422,7 +432,7 @@
               >
                 <div class="num">7</div>
                 <div class="num-img">
-                  <img src="assets/img/pics/10/7.png" alt="Card 1" />
+                  <img src="assets/img/pics/10/7.avif" alt="Card 1" />
                   <video
                     class="nx-video-preview"
                     muted
@@ -432,7 +442,7 @@
                     disablepictureinpicture
                     controlsList="nodownload nopictureinpicture"
                   >
-                    <source src="assets/img/pics/10/7.mp4" type="video/mp4" />
+                    <source src="assets/img/pics/10/7.webm" type="video/mp4" />
                   </video>
                 </div>
               </div>
@@ -443,9 +453,9 @@
               >
                 <div class="num">8</div>
                 <div class="num-img">
-                  <img src="assets/img/pics/10/8.png" alt="Card 1" />
+                  <img src="assets/img/pics/10/8.avif" alt="Card 1" />
                   <img
-                    src="assets/img/pics/10/08.png"
+                    src="assets/img/pics/10/08.avif"
                     class="nx-video-preview"
                     alt="Card 2 Hover"
                   />
@@ -458,9 +468,9 @@
               >
                 <div class="num">9</div>
                 <div class="num-img">
-                  <img src="assets/img/pics/10/9.png" alt="Card 1" />
+                  <img src="assets/img/pics/10/9.avif" alt="Card 1" />
                   <img
-                    src="assets/img/pics/10/09.png"
+                    src="assets/img/pics/10/09.avif"
                     class="nx-video-preview"
                     alt="Card 2 Hover"
                   />
@@ -473,7 +483,7 @@
               >
                 <div class="num">10</div>
                 <div class="num-img">
-                  <img src="assets/img/pics/10/10.png" alt="Card 1" />
+                  <img src="assets/img/pics/10/10.avif" alt="Card 1" />
                   <video
                     class="nx-video-preview"
                     muted
@@ -483,7 +493,7 @@
                     disablepictureinpicture
                     controlsList="nodownload nopictureinpicture"
                   >
-                    <source src="assets/img/pics/10/10.mp4" type="video/mp4" />
+                    <source src="assets/img/pics/10/10.webm" type="video/mp4" />
                   </video>
                 </div>
               </div>
@@ -515,25 +525,25 @@
           <div class="nx-carousel-clip-viewport">
             <div class="nx-carousel-moving-track" id="c3">
               <div class="nx-carousel-card-item">
-                <img src="assets/img/pics/anime/1.png" alt="Card 1" />
+                <img src="assets/img/pics/anime/1.avif" alt="Card 1" />
               </div>
               <div class="nx-carousel-card-item">
-                <img src="assets/img/pics/anime/2.png" alt="Card 2" />
+                <img src="assets/img/pics/anime/2.avif" alt="Card 2" />
               </div>
               <div class="nx-carousel-card-item">
-                <img src="assets/img/pics/anime/3.jpg" alt="Card 3" />
+                <img src="assets/img/pics/anime/3.avif" alt="Card 3" />
               </div>
               <div class="nx-carousel-card-item">
-                <img src="assets/img/pics/anime/4.jpg" alt="Card 4" />
+                <img src="assets/img/pics/anime/4.avif" alt="Card 4" />
               </div>
               <div class="nx-carousel-card-item">
-                <img src="assets/img/pics/anime/7.jpg" alt="Card 5" />
+                <img src="assets/img/pics/anime/7.avif" alt="Card 5" />
               </div>
               <div class="nx-carousel-card-item">
-                <img src="assets/img/pics/anime/5.jpg" alt="Card 6" />
+                <img src="assets/img/pics/anime/5.avif" alt="Card 6" />
               </div>
               <div class="nx-carousel-card-item">
-                <img src="assets/img/pics/anime/6.jpg" alt="Card 7" />
+                <img src="assets/img/pics/anime/6.avif" alt="Card 7" />
               </div>
             </div>
           </div>
@@ -563,7 +573,7 @@
           <div class="nx-carousel-clip-viewport">
             <div class="nx-carousel-moving-track" id="c4">
               <div class="nx-carousel-card-item">
-                <img src="assets/img/pics/7.jpg" alt="Card 1" />
+                <img src="assets/img/pics/7.avif" alt="Card 1" />
               </div>
               <div
                 class="nx-carousel-card-item"
@@ -571,7 +581,7 @@
                 onmouseleave="stopPreview(this)"
               >
                 <div class="recent">Recently added</div>
-                <img src="assets/img/pics/1.JPG" alt="Card 2" />
+                <img src="assets/img/pics/1.avif" alt="Card 2" />
                 <img
                   src="assets/img/pics/1a.GIF"
                   class="nx-video-preview"
@@ -579,7 +589,7 @@
                 />
               </div>
               <div class="nx-carousel-card-item">
-                <img src="assets/img/pics/6.jpg" alt="Card 3" />
+                <img src="assets/img/pics/6.avif" alt="Card 3" />
               </div>
               <div
                 class="nx-carousel-card-item"
@@ -587,7 +597,7 @@
                 onmouseleave="stopPreview(this)"
               >
                 <div class="recent">Recently added</div>
-                <img src="assets/img/pics/8.png" alt="Card 4" />
+                <img src="assets/img/pics/8.avif" alt="Card 4" />
                 <img
                   src="assets/img/pics/8a.gif"
                   class="nx-video-preview"
@@ -595,7 +605,7 @@
                 />
               </div>
               <div class="nx-carousel-card-item">
-                <img src="assets/img/pics/26.PNG" alt="Card 5" />
+                <img src="assets/img/pics/26.avif" alt="Card 5" />
               </div>
               <div
                 class="nx-carousel-card-item"
@@ -603,7 +613,7 @@
                 onmouseleave="stopPreview(this)"
               >
                 <div class="recent">Recently added</div>
-                <img src="assets/img/pics/12.jpeg" alt="Card 6" />
+                <img src="assets/img/pics/12.avif" alt="Card 6" />
                 <video
                   class="nx-video-preview"
                   muted
@@ -613,11 +623,11 @@
                   disablepictureinpicture
                   controlsList="nodownload nopictureinpicture"
                 >
-                  <source src="assets/img/pics/12a.mp4" type="video/mp4" />
+                  <source src="assets/img/pics/12a.webm" type="video/mp4" />
                 </video>
               </div>
               <div class="nx-carousel-card-item">
-                <img src="assets/img/pics/35.png" alt="Card 7" />
+                <img src="assets/img/pics/35.avif" alt="Card 7" />
               </div>
               <div
                 class="nx-carousel-card-item"
@@ -625,7 +635,7 @@
                 onmouseleave="stopPreview(this)"
               >
                 <div class="recent">Recently added</div>
-                <img src="assets/img/pics/47.JPG" alt="Card 8" />
+                <img src="assets/img/pics/47.avif" alt="Card 8" />
                 <video
                   class="nx-video-preview"
                   muted
@@ -635,14 +645,14 @@
                   disablepictureinpicture
                   controlsList="nodownload nopictureinpicture"
                 >
-                  <source src="assets/img/pics/47a.mp4" type="video/mp4" />
+                  <source src="assets/img/pics/47a.webm" type="video/mp4" />
                 </video>
               </div>
               <div class="nx-carousel-card-item">
-                <img src="assets/img/pics/36.png" alt="Card 9" />
+                <img src="assets/img/pics/36.avif" alt="Card 9" />
               </div>
               <div class="nx-carousel-card-item">
-                <img src="assets/img/pics/40.png" alt="Card 10" />
+                <img src="assets/img/pics/40.avif" alt="Card 10" />
               </div>
             </div>
           </div>
@@ -677,7 +687,7 @@
                 onmouseleave="stopPreview(this)"
               >
                 <div class="recent">Recently added</div>
-                <img src="assets/img/pics/11.jpg" alt="Card 1" />
+                <img src="assets/img/pics/11.avif" alt="Card 1" />
                 <video
                   class="nx-video-preview"
                   muted
@@ -687,14 +697,14 @@
                   disablepictureinpicture
                   controlsList="nodownload nopictureinpicture"
                 >
-                  <source src="assets/img/pics/11a.mp4" type="video/mp4" />
+                  <source src="assets/img/pics/11a.webm" type="video/mp4" />
                 </video>
               </div>
               <div class="nx-carousel-card-item">
-                <img src="assets/img/pics/32.JPG" alt="Card 2" />
+                <img src="assets/img/pics/32.avif" alt="Card 2" />
               </div>
               <div class="nx-carousel-card-item">
-                <img src="assets/img/pics/28.JPG" alt="Card 3" />
+                <img src="assets/img/pics/28.avif" alt="Card 3" />
               </div>
               <div
                 class="nx-carousel-card-item"
@@ -702,7 +712,7 @@
                 onmouseleave="stopPreview(this)"
               >
                 <div class="recent">Recently added</div>
-                <img src="assets/img/pics/46.JPG" alt="Card 4" />
+                <img src="assets/img/pics/46.avif" alt="Card 4" />
                 <video
                   class="nx-video-preview"
                   muted
@@ -712,26 +722,26 @@
                   disablepictureinpicture
                   controlsList="nodownload nopictureinpicture"
                 >
-                  <source src="assets/img/pics/46a.mp4" type="video/mp4" />
+                  <source src="assets/img/pics/46a.webm" type="video/mp4" />
                 </video>
               </div>
               <div class="nx-carousel-card-item">
-                <img src="assets/img/pics/23.JPG" alt="Card 5" />
+                <img src="assets/img/pics/23.avif" alt="Card 5" />
               </div>
               <div class="nx-carousel-card-item">
-                <img src="assets/img/pics/24.png" alt="Card 6" />
+                <img src="assets/img/pics/24.avif" alt="Card 6" />
               </div>
               <div class="nx-carousel-card-item">
-                <img src="assets/img/pics/22.jpg" alt="Card 7" />
+                <img src="assets/img/pics/22.avif" alt="Card 7" />
               </div>
               <div class="nx-carousel-card-item">
-                <img src="assets/img/pics/29.JPG" alt="Card 8" />
+                <img src="assets/img/pics/29.avif" alt="Card 8" />
               </div>
               <div class="nx-carousel-card-item">
-                <img src="assets/img/pics/27.JPG" alt="Card 9" />
+                <img src="assets/img/pics/27.avif" alt="Card 9" />
               </div>
               <div class="nx-carousel-card-item">
-                <img src="assets/img/pics/41.png" alt="Card 10" />
+                <img src="assets/img/pics/41.avif" alt="Card 10" />
               </div>
             </div>
           </div>
@@ -761,13 +771,13 @@
           <div class="nx-carousel-clip-viewport">
             <div class="nx-carousel-moving-track" id="c6">
               <div class="nx-carousel-card-item">
-                <img src="assets/img/pics/33.JPG" alt="Card 1" />
+                <img src="assets/img/pics/33.avif" alt="Card 1" />
               </div>
               <div class="nx-carousel-card-item">
-                <img src="assets/img/pics/31.JPG" alt="Card 2" />
+                <img src="assets/img/pics/31.avif" alt="Card 2" />
               </div>
               <div class="nx-carousel-card-item">
-                <img src="assets/img/pics/45.jpeg" alt="Card 3" />
+                <img src="assets/img/pics/45.avif" alt="Card 3" />
               </div>
               <div
                 class="nx-carousel-card-item"
@@ -775,7 +785,7 @@
                 onmouseleave="stopPreview(this)"
               >
                 <div class="recent">Recently added</div>
-                <img src="assets/img/pics/39.JPG" alt="Card 4" />
+                <img src="assets/img/pics/39.avif" alt="Card 4" />
                 <video
                   class="nx-video-preview"
                   muted
@@ -785,14 +795,14 @@
                   disablepictureinpicture
                   controlsList="nodownload nopictureinpicture"
                 >
-                  <source src="assets/img/pics/39a.mp4" type="video/mp4" />
+                  <source src="assets/img/pics/39a.webm" type="video/mp4" />
                 </video>
               </div>
               <div class="nx-carousel-card-item">
-                <img src="assets/img/pics/37.png" alt="Card 5" />
+                <img src="assets/img/pics/37.avif" alt="Card 5" />
               </div>
               <div class="nx-carousel-card-item">
-                <img src="assets/img/pics/16.jpg" alt="Card 6" />
+                <img src="assets/img/pics/16.avif" alt="Card 6" />
               </div>
               <div
                 class="nx-carousel-card-item"
@@ -800,7 +810,7 @@
                 onmouseleave="stopPreview(this)"
               >
                 <div class="recent">Recently added</div>
-                <img src="assets/img/pics/10.JPG" alt="Card 7" />
+                <img src="assets/img/pics/10.avif" alt="Card 7" />
                 <video
                   class="nx-video-preview"
                   muted
@@ -810,17 +820,17 @@
                   disablepictureinpicture
                   controlsList="nodownload nopictureinpicture"
                 >
-                  <source src="assets/img/pics/10a.mp4" type="video/mp4" />
+                  <source src="assets/img/pics/10a.webm" type="video/mp4" />
                 </video>
               </div>
               <div class="nx-carousel-card-item">
-                <img src="assets/img/pics/30.JPG" alt="Card 8" />
+                <img src="assets/img/pics/30.avif" alt="Card 8" />
               </div>
               <div class="nx-carousel-card-item">
-                <img src="assets/img/pics/25.JPG" alt="Card 9" />
+                <img src="assets/img/pics/25.avif" alt="Card 9" />
               </div>
               <div class="nx-carousel-card-item">
-                <img src="assets/img/pics/18.jpg" alt="Card 10" />
+                <img src="assets/img/pics/18.avif" alt="Card 10" />
               </div>
             </div>
           </div>
@@ -855,7 +865,7 @@
                 onmouseleave="stopPreview(this)"
               >
                 <div class="recent">Recently added</div>
-                <img src="assets/img/pics/34.JPG" alt="Card 1" />
+                <img src="assets/img/pics/34.avif" alt="Card 1" />
                 <video
                   class="nx-video-preview"
                   muted
@@ -865,11 +875,11 @@
                   disablepictureinpicture
                   controlsList="nodownload nopictureinpicture"
                 >
-                  <source src="assets/img/pics/34a.mp4" type="video/mp4" />
+                  <source src="assets/img/pics/34a.webm" type="video/mp4" />
                 </video>
               </div>
               <div class="nx-carousel-card-item">
-                <img src="assets/img/pics/20.jpg" alt="Card 2" />
+                <img src="assets/img/pics/20.avif" alt="Card 2" />
               </div>
               <div
                 class="nx-carousel-card-item"
@@ -877,7 +887,7 @@
                 onmouseleave="stopPreview(this)"
               >
                 <div class="recent">Recently added</div>
-                <img src="assets/img/pics/13.png" alt="Card 3" />
+                <img src="assets/img/pics/13.avif" alt="Card 3" />
                 <video
                   class="nx-video-preview"
                   muted
@@ -887,29 +897,29 @@
                   disablepictureinpicture
                   controlsList="nodownload nopictureinpicture"
                 >
-                  <source src="assets/img/pics/13a.mp4" type="video/mp4" />
+                  <source src="assets/img/pics/13a.webm" type="video/mp4" />
                 </video>
               </div>
               <div class="nx-carousel-card-item">
-                <img src="assets/img/pics/43.png" alt="Card 4" />
+                <img src="assets/img/pics/43.avif" alt="Card 4" />
               </div>
               <div class="nx-carousel-card-item">
-                <img src="assets/img/pics/3.JPG" alt="Card 5" />
+                <img src="assets/img/pics/3.avif" alt="Card 5" />
               </div>
               <div class="nx-carousel-card-item">
-                <img src="assets/img/pics/38.png" alt="Card 6" />
+                <img src="assets/img/pics/38.avif" alt="Card 6" />
               </div>
               <div class="nx-carousel-card-item">
-                <img src="assets/img/pics/15.jpg" alt="Card 7" />
+                <img src="assets/img/pics/15.avif" alt="Card 7" />
               </div>
               <div class="nx-carousel-card-item">
-                <img src="assets/img/pics/44.png" alt="Card 8" />
+                <img src="assets/img/pics/44.avif" alt="Card 8" />
               </div>
               <div class="nx-carousel-card-item">
-                <img src="assets/img/pics/14.png" alt="Card 9" />
+                <img src="assets/img/pics/14.avif" alt="Card 9" />
               </div>
               <div class="nx-carousel-card-item">
-                <img src="assets/img/pics/5.png" alt="Card 10" />
+                <img src="assets/img/pics/5.avif" alt="Card 10" />
               </div>
             </div>
           </div>
@@ -940,7 +950,7 @@
           <div class="nx-carousel-clip-viewport">
             <div class="nx-carousel-moving-track" id="c8">
               <div class="nx-carousel-card-item">
-                <img src="assets/img/pics/19.jpg" alt="Card 1" />
+                <img src="assets/img/pics/19.avif" alt="Card 1" />
               </div>
 
               <div
@@ -949,7 +959,7 @@
                 onmouseleave="stopPreview(this)"
               >
                 <div class="recent">Recently added</div>
-                <img src="assets/img/pics/42.png" alt="Card 2" />
+                <img src="assets/img/pics/42.avif" alt="Card 2" />
                 <video
                   class="nx-video-preview"
                   muted
@@ -959,17 +969,17 @@
                   disablepictureinpicture
                   controlsList="nodownload nopictureinpicture"
                 >
-                  <source src="assets/img/pics/42a.mp4" type="video/mp4" />
+                  <source src="assets/img/pics/42a.webm" type="video/mp4" />
                 </video>
               </div>
               <div class="nx-carousel-card-item">
-                <img src="assets/img/pics/48.png" alt="Card 3" />
+                <img src="assets/img/pics/48.avif" alt="Card 3" />
               </div>
               <div class="nx-carousel-card-item">
-                <img src="assets/img/pics/9.png" alt="Card 4" />
+                <img src="assets/img/pics/9.avif" alt="Card 4" />
               </div>
               <div class="nx-carousel-card-item">
-                <img src="assets/img/pics/21.jpg" alt="Card 5" />
+                <img src="assets/img/pics/21.avif" alt="Card 5" />
               </div>
               <div
                 class="nx-carousel-card-item"
@@ -977,7 +987,7 @@
                 onmouseleave="stopPreview(this)"
               >
                 <div class="recent">Recently added</div>
-                <img src="assets/img/pics/49.png" alt="Card 6" />
+                <img src="assets/img/pics/49.avif" alt="Card 6" />
                 <video
                   class="nx-video-preview"
                   muted
@@ -987,11 +997,11 @@
                   disablepictureinpicture
                   controlsList="nodownload nopictureinpicture"
                 >
-                  <source src="assets/img/pics/49a.mp4" type="video/mp4" />
+                  <source src="assets/img/pics/49a.webm" type="video/mp4" />
                 </video>
               </div>
               <div class="nx-carousel-card-item">
-                <img src="assets/img/pics/4.png" alt="Card 7" />
+                <img src="assets/img/pics/4.avif" alt="Card 7" />
               </div>
               <div
                 class="nx-carousel-card-item"
@@ -999,7 +1009,7 @@
                 onmouseleave="stopPreview(this)"
               >
                 <div class="recent">Recently added</div>
-                <img src="assets/img/pics/2.JPG" alt="Card 8" />
+                <img src="assets/img/pics/2.avif" alt="Card 8" />
                 <img
                   src="assets/img/pics/2a.GIF"
                   class="nx-video-preview"
@@ -1007,7 +1017,7 @@
                 />
               </div>
               <div class="nx-carousel-card-item">
-                <img src="assets/img/pics/17.jpg" alt="Card 9" />
+                <img src="assets/img/pics/17.avif" alt="Card 9" />
               </div>
             </div>
           </div>
