@@ -2,6 +2,10 @@
   background: #ff5a5a44; /* WebKit/Blink Browsers */
 }
 
+a:hover {
+  cursor: pointer;
+}
+
 html,
 body {
   margin: 0;

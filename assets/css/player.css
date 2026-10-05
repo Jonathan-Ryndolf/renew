@@ -1,4 +1,9 @@
 /* 1. RESET AND CANVAS CONFIG */
+
+a:hover {
+  cursor: pointer;
+}
+
 * {
   margin: 0;
   padding: 0;

@@ -49,7 +49,7 @@
     <!-- ======= Header ======= -->
     <header id="header" class="fixed-top">
       <div class="container d-flex align-items-center">
-        <a href="/home.html" class="logo"
+        <a onclick="secureRedirect(event, '/home.html')" class="logo"
           ><img src="assets/img/favicon.png" alt="" class="img-fluid"
         /></a>
 
@@ -158,9 +158,7 @@
           </div>
           <div id="p-ico" class="play">
             <div class="play-1">
-              <a href="/renew.html" id="heroPlayBtn"
-                ><i class="ri-play-fill"></i>Play</a
-              >
+              <a id="heroPlayBtn"><i class="ri-play-fill"></i>Play</a>
             </div>
             <div class="play-2">More Info</div>
           </div>
@@ -1020,31 +1018,23 @@
         <div class="container">
           <div class="social-links pt-3 pt-md-0">
             <a
-              href="https://www.instagram.com/jonathan.ryndolf/"
+              onclick="secureRedirect(event, 'https://www.instagram.com/jonathan.ryndolf/', '_blank')"
               class="facebook"
-              target="_blank"
-              rel="noopener noreferrer"
               ><i class="bx bxl-facebook"></i
             ></a>
             <a
-              href="https://www.instagram.com/jonathan.ryndolf/"
+              onclick="secureRedirect(event, 'https://www.instagram.com/jonathan.ryndolf/', '_blank')"
               class="instagram"
-              target="_blank"
-              rel="noopener noreferrer"
               ><i class="bx bxl-instagram"></i
             ></a>
             <a
-              href="https://api.whatsapp.com/send?phone=9790766522"
+              onclick="secureRedirect(event, 'https://api.whatsapp.com/send?phone=9790766522', '_blank')"
               class="twitter"
-              target="_blank"
-              rel="noopener noreferrer"
               ><i class="bx bxl-twitter"></i
             ></a>
             <a
-              href="https://www.linkedin.com/in/jonathan-ryndolf-86a088200/?originalSubdomain=in"
+              onclick="secureRedirect(event, 'https://www.linkedin.com/in/jonathan-ryndolf-86a088200/?originalSubdomain=in', '_blank')"
               class="youtube"
-              target="_blank"
-              rel="noopener noreferrer"
               ><i class="bx bxl-youtube"></i
             ></a>
           </div>

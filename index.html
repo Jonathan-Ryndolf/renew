@@ -50,7 +50,7 @@
     <!-- ======= Header ======= -->
     <header id="header" class="fixed-top">
       <div class="container d-flex align-items-center">
-        <a href="#hero" class="logo"
+        <a class="logo"
           ><img src="assets/img/favicon.png" alt="" class="img-fluid"
         /></a>
       </div>
@@ -61,7 +61,7 @@
       <div class="container">
         <div class="who">Who's watching?</div>
         <div class="row">
-          <a href="/j.html">
+          <a onclick="secureRedirect(event, '/j.html')">
             <div class="col-sm">
               <div class="pro">
                 <img src="assets/img/ds.jpg" />
@@ -69,7 +69,7 @@
               <div class="name">Jonathan</div>
             </div></a
           >
-          <a href="/s.html">
+          <a onclick="secureRedirect(event, '/s.html')">
             <div class="col-sm">
               <div class="pro">
                 <img src="assets/img/lt.jpg" />
@@ -78,7 +78,7 @@
             </div></a
           >
 
-          <a href="/home.html">
+          <a onclick="secureRedirect(event, '/home.html')">
             <div class="col-sm">
               <div class="pro">
                 <img src="assets/img/an.JPG" />
