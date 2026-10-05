@@ -15,11 +15,21 @@
       <!-- Update src="..." to your own local video or web URL link -->
       <video
         class="video-element"
-        src="/assets/img/hi2.av1.mp4"
         preload="metadata"
         disablepictureinpicture
         controlslist="nodownload nopictureinpicture"
-      ></video>
+      >
+        <!-- Primary AV1 source -->
+        <source
+          src="/assets/img/hi2.av1.mp4"
+          type='video/mp4; codecs="av01.0.08M.08"'
+        />
+
+        <!-- Standard MP4 (H.264) fallback source for unsupported browsers -->
+        <source src="/assets/img/hi2.mp4" type="video/mp4" />
+
+        Your browser does not support the video tag.
+      </video>
 
       <!-- Top Header Back Button -->
       <div class="player-header">
