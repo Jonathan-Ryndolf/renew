@@ -407,7 +407,8 @@ a:hover {
 .hero-logo {
   margin-top: 2%;
   margin-left: 5%;
-  width: 45px;
+  height: 45px;
+  max-height: 45px;
   position: absolute;
   z-index: 10;
 }
