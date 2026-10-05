@@ -37,6 +37,10 @@ h6 {
   font-family: Poppins;
 }
 
+a {
+  color: #b4b4b4 !important;
+}
+
 a:hover {
   cursor: pointer;
 }
