@@ -55,13 +55,14 @@
 
         <nav class="nav-menu d-none d-lg-block">
           <ul>
-            <li class="active home"><a href="#">Home</a></li>
-            <li><a href="#">Shows</a></li>
-            <li><a href="#">Movies</a></li>
+            <li class="active home">
+              <a onclick="secureRedirect(event, '/home.html')">Home</a>
+            </li>
+            <li><a>Shows</a></li>
+            <li><a>Movies</a></li>
             <li>
               <a
-                target="_blank"
-                href="https://www.1001games.com/girls/kissing-cure"
+                onclick="secureRedirect(event, 'https://www.1001games.com/girls/kissing-cure', '_blank')"
                 >Games</a
               >
             </li>
@@ -91,7 +92,9 @@
               </ul>
             </div>
           </div>
-          <a href="/index.html"><img src="/assets/img/an.JPG" /></a>
+          <a onclick="secureRedirect(event, '/index.html')"
+            ><img src="/assets/img/an.JPG"
+          /></a>
         </nav>
         <!-- .nav-menu -->
       </div>

@@ -309,3 +309,19 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+// You only need this single function. Delete the querySelectorAll completely.
+function secureRedirect(event, url, target) {
+  event.preventDefault(); // Stops the '#' behavior
+
+  //   // Opens the URL in a new tab safely
+  //   window.open(url, "_blank", "noopener,noreferrer");
+  // }
+  if (target === "_blank") {
+    // Opens in a new tab safely
+    window.open(url, "_blank", "noopener,noreferrer");
+  } else {
+    // Opens in the same tab (default behavior)
+    window.location.href = url;
+  }
+}
