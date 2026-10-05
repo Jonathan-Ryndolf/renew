@@ -325,3 +325,38 @@ function secureRedirect(event, url, target) {
     window.location.href = url;
   }
 }
+
+// 1. Establish the single origin trigger point
+const c02Viewport = document.querySelector("#c02 .nx-carousel-clip-viewport");
+
+// 2. Establish all your distinct target items across the page
+const c02Heading = document.querySelector("#c02 .nx-carousel-heading");
+const c02touch = document.querySelectorAll(".touch"); // Creates the collection list array
+
+if (c02Viewport) {
+  // Triggers when cursor enters the origin track box area
+  c02Viewport.addEventListener("mouseenter", () => {
+    // 💡 ADDED: Applies the shifted class directly to the viewport itself
+    c02Viewport.classList.add("is-shifted");
+
+    if (c02Heading) c02Heading.classList.add("is-shifted");
+
+    // Safely loop through the collection list array to update classes
+    if (c02touch) {
+      c02touch.forEach((element) => element.classList.add("is-out"));
+    }
+  });
+
+  // Triggers when cursor leaves the origin track box area
+  c02Viewport.addEventListener("mouseleave", () => {
+    // 💡 ADDED: Strips the shifted class from the viewport itself
+    c02Viewport.classList.remove("is-shifted");
+
+    if (c02Heading) c02Heading.classList.remove("is-shifted");
+
+    // Safely loop through to strip away classes on leave
+    if (c02touch) {
+      c02touch.forEach((element) => element.classList.remove("is-out"));
+    }
+  });
+}
