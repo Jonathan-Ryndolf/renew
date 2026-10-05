@@ -54,6 +54,10 @@ a:hover {
   background: linear-gradient(180deg, #000000df 0%, #00000000 100%);
 }
 
+#header .container {
+  max-width: 100% !important;
+}
+
 .container {
   margin-left: 40px;
   padding-left: 0px;
@@ -95,9 +99,6 @@ a:hover {
 --------------------------------------------------------------*/
 /* Desktop Navigation */
 
-.ri-search-line {
-}
-
 #header i {
   font-size: 25px !important;
   color: #ffffff;
@@ -111,8 +112,9 @@ a:hover {
 }
 
 .rt-logos {
+  margin-left: auto;
   display: flex;
-  margin-left: 47vw !important;
+  padding-right: 20vh !important;
 }
 
 #header i:hover {
@@ -120,12 +122,14 @@ a:hover {
 }
 
 .anime {
+  margin-left: 1.5vh;
+  width: fit-content;
+  height: fit-content;
   margin-top: auto;
   margin-bottom: auto;
 }
 
 .nav-menu img {
-  margin-left: 9vh;
   width: 30px;
   height: 30px;
   border-radius: 5px;
@@ -383,7 +387,7 @@ a:hover {
   width: 93.5%;
   height: 92%;
   border-radius: 30px;
-  margin-top: 6%;
+  margin-top: 13vh;
   overflow: hidden;
   display: block;
   margin-left: auto;
@@ -891,7 +895,6 @@ NETFLIX ARROW CONTROLS WITH SMOOTH GRADIENT TRANSITIONS
   width: 93.5%;
   height: 92%;
   border-radius: 30px;
-  margin-top: 6%;
   overflow: hidden;
   display: block;
   margin-left: auto;
@@ -1316,7 +1319,6 @@ NETFLIX BELL INTERACTIVE DROPDOWN MESSAGES
 .nx-nav-notification-wrapper {
   margin-top: auto;
   margin-bottom: auto;
-  width: 0px;
   position: relative;
 }
 
