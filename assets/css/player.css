@@ -173,3 +173,32 @@ body {
   width: 28px;
   height: 28px;
 }
+
+/* Container holding both the button and slider */
+.volume-control {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Hide the slider container by default using width */
+.volume-slider-container {
+  width: 0;
+  overflow: hidden;
+  transition: width 0.3s ease; /* Smooth slide-out effect */
+  display: flex;
+  align-items: center;
+  position: absolute;
+  margin-left: 30px;
+}
+
+/* The actual input range slider styling */
+#volume-slider {
+  width: 80px; /* Target width when visible */
+  cursor: pointer;
+}
+
+/* WHEN HOVERED: Expand the slider container */
+.volume-control:hover .volume-slider-container {
+  width: 80px; /* Matches the input width */
+}

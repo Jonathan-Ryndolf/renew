@@ -174,3 +174,21 @@ document.addEventListener("DOMContentLoaded", () => {
   video.addEventListener("loadedmetadata", showControls);
   showControls();
 });
+
+const video = document.querySelector("video");
+const volumeSlider = document.getElementById("volume-slider");
+const muteBtn = document.getElementById("mute-btn");
+
+// Change volume when slider moves
+volumeSlider.addEventListener("input", (e) => {
+  const volumeValue = e.target.value;
+  video.volume = volumeValue;
+
+  // Automatically unmute if user turns volume up
+  if (volumeValue > 0) {
+    video.muted = false;
+    muteBtn.textContent = "🔊";
+  } else {
+    muteBtn.textContent = "🔇";
+  }
+});
