@@ -78,14 +78,20 @@
                 <!-- Sleek pointer arrow -->
                 <ul class="nx-notif-list">
                   <!-- Update your notification item inside the navigation dropdown list to include the custom ID -->
-                  <li class="nx-notif-item" id="firstNotif">
+                  <li
+                    class="nx-notif-item nx-trigger-notif"
+                    data-target-img="/assets/img/hehe2.avif"
+                  >
                     <div class="nx-notif-dot"></div>
                     <p>
                       New <strong>alternate-reality image</strong> received!
                     </p>
                   </li>
 
-                  <li class="nx-notif-item">
+                  <li
+                    class="nx-notif-item nx-trigger-notif"
+                    data-target-img="/assets/img/mumu-love.avif"
+                  >
                     <span class="nx-notif-dot"></span>
                     <p>I Love You <strong>Mumu</strong> <3</p>
                   </li>
@@ -105,30 +111,25 @@
     </header>
     <!-- End Header -->
 
-    <!-- The Envelope Viewport Wrapper -->
+    <!-- The Envelope Viewport Wrapper (Remains as your single global modal frame) -->
     <div id="envelopeOverlay" class="lx-env-overlay-mask">
       <div class="lx-env-box-wrapper" id="envelopeWrapper">
         <div class="lx-env-pocket-container">
-          <!-- 1. The top opening folding flap triangle -->
           <div class="lx-env-paper-flap"></div>
 
-          <!-- 2. The inside hidden letter photo image card -->
+          <!-- The inside hidden letter photo image card -->
           <div class="lx-env-hidden-card" id="letterImageCard">
+            <!-- We remove the hardcoded src; JavaScript will inject this dynamically -->
             <img
-              src="/assets/img/hehe2.avif"
+              src=""
               class="lx-env-surprise-img"
+              id="envelopeSurpriseImg"
               alt="Surprise Image"
             />
           </div>
 
-          <!-- 💡 THE CURE: Separate physical triangles to match your custom drawing layout -->
-          <!-- Left flap triangle layer (Red profile in sketch) -->
           <div class="lx-env-side-left"></div>
-
-          <!-- Right flap triangle layer (Blue profile in sketch) -->
           <div class="lx-env-side-right"></div>
-
-          <!-- Bottom flap triangle layer (Yellow profile in sketch) -->
           <div class="lx-env-side-bottom"></div>
         </div>
       </div>
