@@ -420,6 +420,12 @@ document.addEventListener("DOMContentLoaded", () => {
   lightbox.appendChild(lightboxImg);
   document.body.appendChild(lightbox);
 
+  // 💡 Function to calculate the exact width of the browser's scrollbar
+  function getScrollbarWidth() {
+    return window.innerWidth - document.documentElement.clientWidth;
+  }
+  const scrollbarWidth = getScrollbarWidth();
+
   // 2. Select both target tags across the main layout area
   const targetMedia = document.querySelectorAll("main img, main video");
 
@@ -430,32 +436,27 @@ document.addEventListener("DOMContentLoaded", () => {
       e.stopPropagation();
       let targetSrc = "";
 
-      // Check if the item clicked was a video tag
       if (media.tagName.toLowerCase() === "video") {
-        // Find the closest card container parent
         const cardContainer = media.closest(".nx-carousel-card-item");
-
         if (cardContainer) {
-          // Look for the sibling <img> tag inside that specific card
           const siblingImg = cardContainer.querySelector("img");
           if (siblingImg) targetSrc = siblingImg.src;
         }
-
-        // Fallback check if the video isn't inside a standard card
         if (!targetSrc) targetSrc = media.getAttribute("poster") || "";
       } else {
-        // Standard image click behavior
         targetSrc = media.src;
       }
 
-      // If a valid image source was found, open the lightbox modal
       if (targetSrc) {
         lightboxImg.src = targetSrc;
         lightboxImg.alt = media.alt || "Loveflix Preview";
 
         // Show the background darkness and blur
         lightbox.classList.add("is-active");
-        document.body.style.overflow = "hidden"; // Stops the background page from scrolling
+
+        // 💡 FIX: Add right padding equal to scrollbar width to prevent offset jump
+        document.body.style.paddingRight = scrollbarWidth + "px";
+        document.body.style.overflow = "hidden";
       }
     });
   });
@@ -464,9 +465,11 @@ document.addEventListener("DOMContentLoaded", () => {
   lightbox.addEventListener("click", (e) => {
     if (e.target === lightbox) {
       lightbox.classList.remove("is-active");
-      document.body.style.overflow = ""; // Restores scrolling
 
-      // Clear source after transition finishes to prevent visual flashes next time
+      // 💡 FIX: Restore standard padding and scroll metrics smoothly
+      document.body.style.overflow = "";
+      document.body.style.paddingRight = "";
+
       setTimeout(() => {
         if (!lightbox.classList.contains("is-active")) {
           lightboxImg.src = "";
