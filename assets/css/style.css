@@ -436,6 +436,7 @@ a:hover {
   margin-left: 5%;
   margin-top: 65vh;
   z-index: 10;
+  pointer-events: none;
 }
 
 .genre-stuff {
@@ -466,6 +467,12 @@ a:hover {
   font-size: 20px;
 }
 
+.play-1 a,
+.play-2 {
+  pointer-events: auto !important;
+  cursor: pointer !important;
+}
+
 .play {
   margin-top: 3%;
   width: 100%;
@@ -491,7 +498,7 @@ a:hover {
 }
 
 #hero a:hover {
-  color: #000000af !important;
+  color: #000000 !important;
   background-color: #ffffffaf;
 }
 
@@ -512,7 +519,7 @@ a:hover {
 }
 
 .play-2:hover {
-  color: #ffffffaf;
+  color: #ffffffdc;
   background-color: #ffffff17;
 }
 
