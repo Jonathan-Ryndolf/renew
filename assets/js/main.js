@@ -410,3 +410,68 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  // 1. Create the lightbox elements dynamically
+  const lightbox = document.createElement("div");
+  lightbox.classList.add("loveflix-lightbox");
+
+  const lightboxImg = document.createElement("img");
+  lightbox.appendChild(lightboxImg);
+  document.body.appendChild(lightbox);
+
+  // 2. Select both target tags across the main layout area
+  const targetMedia = document.querySelectorAll("main img, main video");
+
+  targetMedia.forEach((media) => {
+    media.style.cursor = "pointer";
+
+    media.addEventListener("click", (e) => {
+      e.stopPropagation();
+      let targetSrc = "";
+
+      // Check if the item clicked was a video tag
+      if (media.tagName.toLowerCase() === "video") {
+        // Find the closest card container parent
+        const cardContainer = media.closest(".nx-carousel-card-item");
+
+        if (cardContainer) {
+          // Look for the sibling <img> tag inside that specific card
+          const siblingImg = cardContainer.querySelector("img");
+          if (siblingImg) targetSrc = siblingImg.src;
+        }
+
+        // Fallback check if the video isn't inside a standard card
+        if (!targetSrc) targetSrc = media.getAttribute("poster") || "";
+      } else {
+        // Standard image click behavior
+        targetSrc = media.src;
+      }
+
+      // If a valid image source was found, open the lightbox modal
+      if (targetSrc) {
+        lightboxImg.src = targetSrc;
+        lightboxImg.alt = media.alt || "Loveflix Preview";
+
+        // Show the background darkness and blur
+        lightbox.classList.add("is-active");
+        document.body.style.overflow = "hidden"; // Stops the background page from scrolling
+      }
+    });
+  });
+
+  // 3. Close the lightbox when clicking on the dark blurred background overlay
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) {
+      lightbox.classList.remove("is-active");
+      document.body.style.overflow = ""; // Restores scrolling
+
+      // Clear source after transition finishes to prevent visual flashes next time
+      setTimeout(() => {
+        if (!lightbox.classList.contains("is-active")) {
+          lightboxImg.src = "";
+        }
+      }, 300);
+    }
+  });
+});
