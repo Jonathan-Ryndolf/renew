@@ -1211,6 +1211,14 @@ body.modal-open-lock {
   box-shadow: -30px 0px 40px #151515 !important;
 }
 
+.ten {
+  margin-left: 20vh !important;
+}
+
+.ten:hover {
+  margin-left: -15vh !important;
+}
+
 #c02 .num-img img {
   align-items: center;
   width: 100% !important;
