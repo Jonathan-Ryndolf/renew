@@ -368,7 +368,7 @@ if (c02Viewport) {
 
 window.addEventListener("DOMContentLoaded", () => {
   const audio = document.getElementById("myAudio");
-  audio.volume = 0.01;
+  audio.volume = 0.08;
   audio.play().catch((error) => {
     console.log("Autoplay blocked by browser:", error);
   });
