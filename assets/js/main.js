@@ -232,7 +232,7 @@ if (confirmBtn) {
       }
     } else {
       isPlayButtonUnlocked = false;
-      if (playButton) playButton.href = "/renew.html";
+      if (playButton) playButton.href = "";
       if (favDialog) favDialog.close();
     }
   });
