@@ -535,9 +535,9 @@ NETFLIX BELL INTERACTIVE DROPDOWN MESSAGES
   width: 290px !important;
   height: 170px !important;
 
-  background: #ffffff !important;
+  background: #00000000 !important;
   padding: 6px !important;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important;
+
   z-index: 1 !important;
 
   box-sizing: border-box !important;
@@ -588,7 +588,6 @@ NETFLIX BELL INTERACTIVE DROPDOWN MESSAGES
   transform: translate(-50%, -50%) scale(2.2) !important;
   top: 35% !important;
   z-index: 5 !important;
-  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.7) !important;
 }
 
 .lx-env-box-wrapper,
