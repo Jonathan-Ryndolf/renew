@@ -548,6 +548,11 @@ NETFLIX BELL INTERACTIVE DROPDOWN MESSAGES
     height 0.4s ease-in-out, box-shadow 0.6s ease !important;
 }
 
+.lx-env-hidden-card img {
+  object-fit: cover !important;
+  object-position: top !important;
+}
+
 /* Isolate core surprise image element properties explicitly */
 .lx-env-surprise-img {
   width: 100% !important;
