@@ -591,6 +591,17 @@ NETFLIX BELL INTERACTIVE DROPDOWN MESSAGES
   box-shadow: 0 30px 70px rgba(0, 0, 0, 0.7) !important;
 }
 
+.lx-env-box-wrapper,
+.lx-env-paper-flap,
+.lx-env-side-left,
+.lx-env-side-right,
+.lx-env-side-bottom {
+  filter: hue-rotate(90deg);
+}
+.lx-env-surprise-img {
+  filter: hue-rotate(-90deg) !important;
+}
+
 .lx-env-box-wrapper {
   background-color: #972424 !important;
 }
