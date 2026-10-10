@@ -596,10 +596,10 @@ NETFLIX BELL INTERACTIVE DROPDOWN MESSAGES
 .lx-env-side-left,
 .lx-env-side-right,
 .lx-env-side-bottom {
-  filter: hue-rotate(90deg);
+  filter: hue-rotate(-3deg);
 }
 .lx-env-surprise-img {
-  filter: hue-rotate(-90deg) !important;
+  filter: hue-rotate(3deg) !important;
 }
 
 .lx-env-box-wrapper {
