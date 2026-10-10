@@ -478,3 +478,27 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+const ambientAudio = document.getElementById("myAudio");
+
+function startAmbientMusic() {
+  // Unmute the audio and try to play it
+  ambientAudio.muted = false;
+  ambientAudio
+    .play()
+    .then(() => {
+      // Success! Clean up the touch listeners
+      window.removeEventListener("click", startAmbientMusic);
+      window.removeEventListener("touchstart", startAmbientMusic);
+    })
+    .catch((error) => {
+      console.log(
+        "Playback failed, waiting for definitive interaction:",
+        error
+      );
+    });
+}
+
+// Listen for the first touch or click on the screen
+window.addEventListener("click", startAmbientMusic);
+window.addEventListener("touchstart", startAmbientMusic);
