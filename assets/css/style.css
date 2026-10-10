@@ -446,7 +446,6 @@ NETFLIX BELL INTERACTIVE DROPDOWN MESSAGES
   position: relative !important;
   width: 320px !important;
   height: 200px !important;
-  background-color: #d1b894 !important; /* Core paper backing tone */
   cursor: pointer !important;
   border-bottom-left-radius: 10px !important;
   border-bottom-right-radius: 10px !important;
@@ -479,7 +478,6 @@ NETFLIX BELL INTERACTIVE DROPDOWN MESSAGES
   height: 0 !important;
   border-left: 160px solid transparent !important;
   border-right: 160px solid transparent !important;
-  border-top: 110px solid #bd9b6d !important;
   transform-origin: top !important;
   transition: transform 0.4s ease 0.1s !important;
   z-index: 4 !important;
@@ -494,7 +492,6 @@ NETFLIX BELL INTERACTIVE DROPDOWN MESSAGES
   height: 0 !important;
   border-top: 100px solid transparent !important;
   border-bottom: 100px solid transparent !important;
-  border-left: 160px solid #a28354 !important;
   z-index: 3 !important;
   border-bottom-left-radius: 10px !important;
 }
@@ -508,7 +505,6 @@ NETFLIX BELL INTERACTIVE DROPDOWN MESSAGES
   height: 0 !important;
   border-top: 100px solid transparent !important;
   border-bottom: 100px solid transparent !important;
-  border-right: 160px solid #a28354 !important;
   z-index: 3 !important;
   border-bottom-right-radius: 10px !important;
 }
@@ -522,7 +518,6 @@ NETFLIX BELL INTERACTIVE DROPDOWN MESSAGES
   height: 0 !important;
   border-left: 160px solid transparent !important;
   border-right: 160px solid transparent !important;
-  border-bottom: 110px solid #8c7045 !important;
   z-index: 3 !important;
   border-bottom-left-radius: 10px !important;
   border-bottom-right-radius: 10px !important;
@@ -594,6 +589,20 @@ NETFLIX BELL INTERACTIVE DROPDOWN MESSAGES
   top: 35% !important;
   z-index: 5 !important;
   box-shadow: 0 30px 70px rgba(0, 0, 0, 0.7) !important;
+}
+
+.lx-env-box-wrapper {
+  background-color: #d1b894 !important;
+}
+.lx-env-paper-flap {
+  border-top: 110px solid #bd9b6d !important;
+}
+.lx-env-side-left,
+.lx-env-side-right {
+  border-left: 160px solid #a28354 !important;
+}
+.lx-env-side-bottom {
+  border-bottom: 110px solid #8c7045 !important;
 }
 
 /* Mobile Navigation */
