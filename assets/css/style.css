@@ -597,9 +597,11 @@ NETFLIX BELL INTERACTIVE DROPDOWN MESSAGES
 .lx-env-paper-flap {
   border-top: 110px solid #bd9b6d !important;
 }
-.lx-env-side-left,
-.lx-env-side-right {
+.lx-env-side-left {
   border-left: 160px solid #a28354 !important;
+}
+.lx-env-side-right {
+  border-right: 160px solid #a28354 !important;
 }
 .lx-env-side-bottom {
   border-bottom: 110px solid #8c7045 !important;
